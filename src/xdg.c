@@ -7,7 +7,7 @@
 #include "common/mem.h"
 #include "decorations.h"
 #include "foreign-toplevel.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "menu/menu.h"
 #include "node.h"
 #include "snap-constraints.h"

@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <wlr/types/wlr_ext_foreign_toplevel_list_v1.h>
 #include "common/macros.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "view.h"
 #include "foreign-toplevel-internal.h"
 

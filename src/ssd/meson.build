@@ -1,4 +1,4 @@
-labwc_sources += files(
+neco_sources += files(
   'resize-indicator.c',
   'ssd.c',
   'ssd-part.c',

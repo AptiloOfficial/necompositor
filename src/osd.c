@@ -13,7 +13,7 @@
 #include "common/scene-helpers.h"
 #include "common/string-helpers.h"
 #include "config/rcxml.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "node.h"
 #include "osd.h"
 #include "theme.h"

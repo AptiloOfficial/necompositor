@@ -2,7 +2,7 @@
 #define _POSIX_C_SOURCE 200809L
 #include <assert.h>
 #include "common/mem.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "node.h"
 
 struct session_lock_output {

@@ -3,13 +3,13 @@
 : ${LABWC_RUNS:=1}
 : ${LABWC_LEAK_TEST:=0}
 
-if ! test -x "$1/labwc"; then
+if ! test -x "$1/necompositor"; then
 	echo "$1/labwc not found"
 	exit 1
 fi
 
 args=(
-	"$1/labwc"
+	"$1/necompositor"
 	-C scripts/ci
 	-d
 )
@@ -63,5 +63,5 @@ for((i=1; i<=LABWC_RUNS; i++)); do
 	fi
 done
 
-echo "labwc terminated with return code $ret"
+echo "necompositor terminated with return code $ret"
 exit $ret

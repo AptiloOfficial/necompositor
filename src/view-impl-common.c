@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <strings.h>
 #include "foreign-toplevel.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "view.h"
 #include "view-impl-common.h"
 #include "window-rules.h"

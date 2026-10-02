@@ -5,7 +5,7 @@ test_lib = static_library(
     '../src/common/mem.c',
     '../src/common/string-helpers.c'
   ),
-  include_directories: [labwc_inc],
+  include_directories: [neco_inc],
   dependencies: [dep_cmocka],
 )
 
@@ -20,7 +20,7 @@ foreach t : tests
     executable(
       'test_@0@'.format(t),
       sources: '@0@.c'.format(t),
-      include_directories: [labwc_inc],
+      include_directories: [neco_inc],
       link_with: [test_lib],
     ),
     is_parallel: false,

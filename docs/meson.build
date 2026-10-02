@@ -9,8 +9,8 @@ if scdoc.found()
     '-theme.5',
   ]
   foreach s : sections
-    markdown = 'labwc' + s + '.scd'
-    manpage = 'labwc' + s
+    markdown = 'necompositor' + s + '.scd'
+    manpage = 'necompositor' + s
     custom_target(
       manpage,
       input: markdown,

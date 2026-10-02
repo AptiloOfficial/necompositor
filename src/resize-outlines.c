@@ -4,7 +4,7 @@
 #include "common/graphic-helpers.h"
 #include "ssd.h"
 #include "resize-outlines.h"
-#include "labwc.h"
+#include "necompositor.h"
 
 bool
 resize_outlines_enabled(struct view *view)

@@ -16,7 +16,7 @@
 #endif
 #include "img/img-xbm.h"
 #include "img/img-xpm.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "theme.h"
 
 struct lab_img_data {

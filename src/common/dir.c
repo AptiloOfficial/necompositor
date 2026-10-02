@@ -15,7 +15,7 @@
 #include "common/list.h"
 #include "common/mem.h"
 #include "common/string-helpers.h"
-#include "labwc.h"
+#include "necompositor.h"
 
 struct dir {
 	const char *prefix;
@@ -75,10 +75,10 @@ build_config_path(struct ctx *ctx, char *prefix, const char *path)
 }
 
 static void
-build_theme_path_labwc(struct ctx *ctx, char *prefix, const char *path)
+build_theme_path_necompositor(struct ctx *ctx, char *prefix, const char *path)
 {
 	assert(prefix);
-	snprintf(ctx->buf, ctx->len, "%s/%s/%s/labwc/%s", prefix, path,
+	snprintf(ctx->buf, ctx->len, "%s/%s/%s/necompositor/%s", prefix, path,
 		ctx->theme_name, ctx->filename);
 }
 
@@ -177,7 +177,7 @@ paths_theme_create(struct wl_list *paths, const char *theme_name,
 	static char buf[4096] = { 0 };
 	wl_list_init(paths);
 	struct ctx ctx = {
-		.build_path_fn = build_theme_path_labwc,
+		.build_path_fn = build_theme_path_necompositor,
 		.filename = filename,
 		.buf = buf,
 		.len = sizeof(buf),

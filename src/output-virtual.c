@@ -4,7 +4,7 @@
 #include <wlr/backend/headless.h>
 #include <wlr/types/wlr_output.h>
 #include "common/string-helpers.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "output-virtual.h"
 
 static struct wlr_output *fallback_output = NULL;

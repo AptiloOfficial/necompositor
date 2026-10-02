@@ -25,7 +25,7 @@
 #include "common/scene-helpers.h"
 #include "common/spawn.h"
 #include "common/string-helpers.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "menu/menu.h"
 #include "workspaces.h"
 #include "view.h"

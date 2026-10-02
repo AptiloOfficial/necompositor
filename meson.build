@@ -1,5 +1,5 @@
 project(
-  'labwc',
+  'necompositor',
   'c',
   version: '0.8.4',
   license: 'GPL-2.0-only',
@@ -122,11 +122,11 @@ else
   conf_data.set('HAVE_NLS', 0)
 endif
 
-labwc_inc = include_directories('include')
+neco_inc = include_directories('include')
 
 subdir('protocols')
 
-labwc_deps = [
+neco_deps = [
   server_protos,
   wayland_server,
   wlroots,
@@ -143,12 +143,12 @@ labwc_deps = [
   png,
 ]
 if have_rsvg
-  labwc_deps += [
+  neco_deps += [
     svg,
   ]
 endif
 if have_libsfdo
-  labwc_deps += [
+  neco_deps += [
     sfdo_basedir,
     sfdo_desktop,
     sfdo_icon,
@@ -166,17 +166,17 @@ endif
 
 executable(
   meson.project_name(),
-  labwc_sources,
-  include_directories: [labwc_inc],
-  dependencies: labwc_deps,
+  neco_sources,
+  include_directories: [neco_inc],
+  dependencies: neco_deps,
   install: true,
 )
 
-install_data('data/labwc.desktop', install_dir: get_option('datadir') / 'wayland-sessions')
+install_data('data/necompositor.desktop', install_dir: get_option('datadir') / 'wayland-sessions')
 
-install_data('data/labwc-portals.conf', install_dir: get_option('datadir') / 'xdg-desktop-portal')
+install_data('data/necompositor-portals.conf', install_dir: get_option('datadir') / 'xdg-desktop-portal')
 
-icons = ['labwc-symbolic.svg', 'labwc.svg']
+icons = ['necompositor-symbolic.svg', 'necompositor.svg']
 foreach icon : icons
   icon_path = join_paths('data', icon)
   install_data(icon_path, install_dir: get_option('datadir') / 'icons/hicolor/scalable/apps')

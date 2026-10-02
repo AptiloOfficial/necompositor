@@ -13,7 +13,7 @@
 #include "common/string-helpers.h"
 #include "desktop-entry.h"
 #include "img/img.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "node.h"
 #include "ssd-internal.h"
 #include "theme.h"

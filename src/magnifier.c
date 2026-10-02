@@ -5,7 +5,7 @@
 #include <wlr/types/wlr_output.h>
 #include <wlr/util/transform.h>
 #include "common/box.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "magnifier.h"
 #include "theme.h"
 

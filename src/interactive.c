@@ -2,7 +2,7 @@
 #include <assert.h>
 #include "edges.h"
 #include "input/keyboard.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "regions.h"
 #include "resize-indicator.h"
 #include "snap.h"

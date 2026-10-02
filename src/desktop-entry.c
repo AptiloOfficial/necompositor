@@ -12,7 +12,7 @@
 #include "desktop-entry.h"
 #include "img/img.h"
 
-#include "labwc.h"
+#include "necompositor.h"
 
 static const char *debug_libsfdo;
 

@@ -5,7 +5,7 @@
 
 #include <wlr/types/wlr_text_input_v3.h>
 #include <wlr/types/wlr_input_method_v2.h>
-#include "labwc.h"
+#include "necompositor.h"
 
 struct keyboard;
 

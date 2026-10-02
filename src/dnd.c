@@ -5,7 +5,7 @@
 #include <wlr/util/log.h>
 #include "dnd.h"
 #include "input/cursor.h"
-#include "labwc.h"  /* for struct seat */
+#include "necompositor.h"  /* for struct seat */
 #include "view.h"
 
 /* Internal DnD handlers */

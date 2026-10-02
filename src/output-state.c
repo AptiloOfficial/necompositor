@@ -2,7 +2,7 @@
 
 #include <wlr/types/wlr_output.h>
 #include <wlr/types/wlr_output_management_v1.h>
-#include "labwc.h"
+#include "necompositor.h"
 #include "output-state.h"
 
 void

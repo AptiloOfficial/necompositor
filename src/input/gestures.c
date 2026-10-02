@@ -2,7 +2,7 @@
 #include <wlr/types/wlr_pointer_gestures_v1.h>
 #include "common/macros.h"
 #include "input/gestures.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "idle.h"
 
 static void

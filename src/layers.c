@@ -18,7 +18,7 @@
 #include "common/mem.h"
 #include "config/rcxml.h"
 #include "layers.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "node.h"
 
 #define LAB_LAYERSHELL_VERSION 4

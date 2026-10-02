@@ -1,4 +1,4 @@
-labwc_sources += files(
+neco_sources += files(
   'direction.c',
   'box.c',
   'buf.c',

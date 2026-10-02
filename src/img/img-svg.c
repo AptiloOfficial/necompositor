@@ -12,7 +12,7 @@
 #include "buffer.h"
 #include "common/string-helpers.h"
 #include "img/img-svg.h"
-#include "labwc.h"
+#include "necompositor.h"
 
 RsvgHandle *
 img_svg_load(const char *filename)

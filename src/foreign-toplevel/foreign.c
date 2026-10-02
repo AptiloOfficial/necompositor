@@ -3,7 +3,7 @@
 #include <wayland-server-core.h>
 #include "common/macros.h"
 #include "common/mem.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "view.h"
 #include "foreign-toplevel-internal.h"
 

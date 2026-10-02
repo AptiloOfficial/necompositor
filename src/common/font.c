@@ -8,7 +8,7 @@
 #include "common/font.h"
 #include "common/graphic-helpers.h"
 #include "common/string-helpers.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "buffer.h"
 
 PangoFontDescription *

@@ -2,7 +2,7 @@
 #include <wlr/types/wlr_xdg_decoration_v1.h>
 #include "common/mem.h"
 #include "decorations.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "view.h"
 
 struct xdg_deco {

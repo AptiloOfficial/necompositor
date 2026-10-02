@@ -1,4 +1,4 @@
-labwc_sources += files(
+neco_sources += files(
   'rcxml.c',
   'keybind.c',
   'session.c',

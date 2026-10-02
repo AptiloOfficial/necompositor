@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
 #ifndef NECO_RESISTANCE_H
 #define NECO_RESISTANCE_H
-#include "labwc.h"
+#include "necompositor.h"
 
 /**
  * resistance_unsnap_apply() - Apply resistance when dragging a

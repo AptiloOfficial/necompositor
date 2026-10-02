@@ -1,4 +1,4 @@
-labwc_sources += files(
+neco_sources += files(
   'kde-deco.c',
   'xdg-deco.c',
 )

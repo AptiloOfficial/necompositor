@@ -4,7 +4,7 @@
 #include "common/list.h"
 #include "common/macros.h"
 #include "common/mem.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "xwayland.h"
 
 static void

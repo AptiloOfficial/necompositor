@@ -9,7 +9,7 @@
 #include "action.h"
 #include "common/match.h"
 #include "config/rcxml.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "view.h"
 #include "window-rules.h"
 

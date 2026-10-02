@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include "common/macros.h"
 #include "common/mem.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "placement.h"
 #include "ssd.h"
 #include "view.h"

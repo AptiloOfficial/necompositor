@@ -9,7 +9,7 @@
 #include "common/macros.h"
 #include "config/rcxml.h"
 #include "edges.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "view.h"
 #include "node.h"
 

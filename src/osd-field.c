@@ -6,7 +6,7 @@
 #include "config/rcxml.h"
 #include "view.h"
 #include "workspaces.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "desktop-entry.h"
 #include "osd.h"
 

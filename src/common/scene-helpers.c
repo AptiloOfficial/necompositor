@@ -7,7 +7,7 @@
 #include <wlr/util/region.h>
 #include <wlr/util/transform.h>
 #include "common/scene-helpers.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "magnifier.h"
 #include "output-state.h"
 

@@ -6,7 +6,7 @@
 #include "common/string-helpers.h"
 #include "debug.h"
 #include "input/ime.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "node.h"
 #include "ssd.h"
 #include "view.h"

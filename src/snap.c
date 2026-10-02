@@ -5,7 +5,7 @@
 #include "common/border.h"
 #include "common/macros.h"
 #include "edges.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "snap-constraints.h"
 #include "snap.h"
 #include "view.h"

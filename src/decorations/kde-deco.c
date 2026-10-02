@@ -4,7 +4,7 @@
 #include "common/list.h"
 #include "common/mem.h"
 #include "decorations.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "view.h"
 
 static struct wl_list decorations;

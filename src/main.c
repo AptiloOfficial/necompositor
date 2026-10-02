@@ -9,7 +9,7 @@
 #include "common/mem.h"
 #include "common/spawn.h"
 #include "config/session.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "theme.h"
 #include "menu/menu.h"
 
@@ -31,7 +31,7 @@ static const struct option long_options[] = {
 };
 
 static const char neco_usage[] =
-"Usage: labwc [options...]\n"
+"Usage: necompositor [options...]\n"
 "  -c, --config <file>      Specify config file (with path)\n"
 "  -C, --config-dir <dir>   Specify config directory\n"
 "  -d, --debug              Enable full logging, including debug information\n"
@@ -65,7 +65,7 @@ die_on_detecting_suid(void)
 }
 
 static void
-send_signal_to_labwc_pid(int signal)
+send_signal_to_necompositor_pid(int signal)
 {
 	char *neco_pid = getenv("NECO_PID");
 	if (!neco_pid) {
@@ -134,13 +134,13 @@ main(int argc, char *argv[])
 			verbosity = WLR_DEBUG;
 			break;
 		case 'e':
-			send_signal_to_labwc_pid(SIGTERM);
+			send_signal_to_necompositor_pid(SIGTERM);
 			exit(0);
 		case 'm':
 			rc.merge_config = true;
 			break;
 		case 'r':
-			send_signal_to_labwc_pid(SIGHUP);
+			send_signal_to_necompositor_pid(SIGHUP);
 			exit(0);
 		case 's':
 			startup_cmd = optarg;
@@ -149,7 +149,7 @@ main(int argc, char *argv[])
 			primary_client = optarg;
 			break;
 		case 'v':
-			printf("labwc " NECO_VERSION "\n");
+			printf("necompositor " NECO_VERSION "\n");
 			exit(0);
 		case 'V':
 			verbosity = WLR_INFO;
@@ -181,7 +181,7 @@ main(int argc, char *argv[])
 	/*
 	 * Set environment variable NECO_PID to the pid of the compositor
 	 * so that SIGHUP and SIGTERM can be sent to specific instances using
-	 * `kill -s <signal> <pid>` rather than `killall -s <signal> labwc`
+	 * `kill -s <signal> <pid>` rather than `killall -s <signal> necompositor`
 	 */
 	char pid[32];
 	snprintf(pid, sizeof(pid), "%d", getpid());

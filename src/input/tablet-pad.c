@@ -11,7 +11,7 @@
 #include "input/cursor.h"
 #include "input/tablet-pad.h"
 #include "input/tablet.h"
-#include "labwc.h"
+#include "necompositor.h"
 
 void
 tablet_pad_attach_tablet(struct seat *seat)

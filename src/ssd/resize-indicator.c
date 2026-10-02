@@ -5,7 +5,7 @@
 #include <wlr/util/log.h>
 #include "common/macros.h"
 #include "common/scaled-font-buffer.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "resize-indicator.h"
 #include "resize-outlines.h"
 #include "view.h"

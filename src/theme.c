@@ -30,7 +30,7 @@
 #include "common/string-helpers.h"
 #include "config/rcxml.h"
 #include "img/img.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "theme.h"
 #include "buffer.h"
 #include "ssd.h"
@@ -1519,7 +1519,7 @@ theme_init(struct theme *theme, struct server *server, const char *theme_name)
 		paths_destroy(&paths);
 	}
 
-	/* Read <config-dir>/labwc/themerc-override */
+	/* Read <config-dir>/necompositor/themerc-override */
 	paths_config_create(&paths, "themerc-override");
 	theme_read(theme, &paths);
 	paths_destroy(&paths);

@@ -11,7 +11,7 @@
 #include "input/ime.h"
 #include "input/keyboard.h"
 #include "input/key-state.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "menu/menu.h"
 #include "osd.h"
 #include "regions.h"

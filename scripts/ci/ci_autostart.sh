@@ -13,5 +13,5 @@ echo "Executing foot"
 foot sh -c 'sleep 1; exit'
 echo "Foot exited with $?"
 
-echo "Killing labwc"
+echo "Killing necompositor"
 kill -s TERM $LABWC_PID

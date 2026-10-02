@@ -15,7 +15,7 @@
 #include "input/tablet.h"
 #include "input/tablet-tool.h"
 #include "input/tablet-pad.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "idle.h"
 #include "action.h"
 

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=NeCompositor
+Comment=Lightweight Compositor
+Exec=necompositor
+Icon=necompositor
+Type=Application
+DesktopNames=necompositor

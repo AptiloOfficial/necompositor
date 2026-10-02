@@ -9,7 +9,7 @@
 
 #include "common/macros.h"
 #include "common/mem.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "node.h"
 #include "view.h"
 

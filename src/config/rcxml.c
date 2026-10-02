@@ -31,7 +31,7 @@
 #include "config/mousebind.h"
 #include "config/tablet.h"
 #include "config/rcxml.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "osd.h"
 #include "regions.h"
 #include "view.h"

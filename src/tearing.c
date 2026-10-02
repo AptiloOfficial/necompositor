@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
 
 #include "common/mem.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "view.h"
 
 struct tearing_controller {

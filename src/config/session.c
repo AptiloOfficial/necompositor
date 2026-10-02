@@ -19,7 +19,7 @@
 #include "common/spawn.h"
 #include "common/string-helpers.h"
 #include "config/session.h"
-#include "labwc.h"
+#include "necompositor.h"
 
 static const char *const env_vars[] = {
 	"DISPLAY",
@@ -253,7 +253,7 @@ session_environment_init(void)
 	 * May be overridden either by already having a value set or by the user
 	 * supplied environment file.
 	 */
-	setenv("XDG_CURRENT_DESKTOP", "labwc:wlroots", 0);
+	setenv("XDG_CURRENT_DESKTOP", "necompositor:wlroots", 0);
 
 	/*
 	 * Set default for _JAVA_AWT_WM_NONREPARENTING so that Java applications

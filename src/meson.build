@@ -1,4 +1,4 @@
-labwc_sources = files(
+neco_sources = files(
   'action.c',
   'buffer.c',
   'debug.c',
@@ -37,14 +37,14 @@ labwc_sources = files(
 )
 
 if have_xwayland
-  labwc_sources += files(
+  neco_sources += files(
     'xwayland.c',
     'xwayland-unmanaged.c',
   )
 endif
 
 if have_libsfdo
-  labwc_sources += files(
+  neco_sources += files(
     'desktop-entry.c',
   )
 endif

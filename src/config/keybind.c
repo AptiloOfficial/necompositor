@@ -10,7 +10,7 @@
 #include "common/mem.h"
 #include "config/keybind.h"
 #include "config/rcxml.h"
-#include "labwc.h"
+#include "necompositor.h"
 
 uint32_t
 parse_modifier(const char *symname)

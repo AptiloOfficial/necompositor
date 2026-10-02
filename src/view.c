@@ -13,7 +13,7 @@
 #include "common/scene-helpers.h"
 #include "foreign-toplevel.h"
 #include "input/keyboard.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "menu/menu.h"
 #include "osd.h"
 #include "output-state.h"

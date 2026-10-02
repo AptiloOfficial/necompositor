@@ -1,4 +1,4 @@
-labwc_sources += files(
+neco_sources += files(
   'cursor.c',
   'tablet.c',
   'tablet-pad.c',

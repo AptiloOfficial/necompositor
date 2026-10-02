@@ -4,7 +4,7 @@
 #include "common/scene-helpers.h"
 #include "common/surface-helpers.h"
 #include "dnd.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "layers.h"
 #include "node.h"
 #include "osd.h"

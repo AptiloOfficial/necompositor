@@ -9,7 +9,7 @@
 #include "config/rcxml.h"
 #include "config/session.h"
 #include "foreign-toplevel.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "node.h"
 #include "ssd.h"
 #include "view.h"

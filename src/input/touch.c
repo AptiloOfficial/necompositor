@@ -7,7 +7,7 @@
 #include "common/scene-helpers.h"
 #include "idle.h"
 #include "input/touch.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "config/mousebind.h"
 #include "action.h"
 

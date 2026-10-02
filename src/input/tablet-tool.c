@@ -9,7 +9,7 @@
 #include "config/rcxml.h"
 #include "input/cursor.h"
 #include "input/tablet-tool.h"
-#include "labwc.h"
+#include "necompositor.h"
 
 bool
 tablet_tool_has_focused_surface(struct seat *seat)

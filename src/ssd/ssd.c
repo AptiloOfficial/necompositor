@@ -10,7 +10,7 @@
 #include <strings.h>
 #include "common/mem.h"
 #include "common/scene-helpers.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "ssd-internal.h"
 #include "theme.h"
 #include "view.h"

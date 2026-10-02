@@ -14,7 +14,7 @@
 #include "common/spawn.h"
 #include "common/string-helpers.h"
 #include "debug.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "magnifier.h"
 #include "menu/menu.h"
 #include "osd.h"

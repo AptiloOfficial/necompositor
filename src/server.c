@@ -38,7 +38,7 @@
 #include "desktop-entry.h"
 #include "idle.h"
 #include "input/keyboard.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "layers.h"
 #include "magnifier.h"
 #include "menu/menu.h"
@@ -362,7 +362,7 @@ static const char helpful_seat_error_message[] =
 "documentation on how to use seatd, elogind or similar. This is likely to involve\n"
 "manually adding users to groups.\n"
 "\n"
-"If the above does not work, try running with `WLR_RENDERER=pixman labwc` in\n"
+"If the above does not work, try running with `WLR_RENDERER=pixman necompositor` in\n"
 "order to use the software rendering fallback\n";
 
 static void

@@ -14,7 +14,7 @@
 #include "common/list.h"
 #include "common/mem.h"
 #include "input/keyboard.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "protocols/cosmic-workspaces.h"
 #include "protocols/ext-workspace.h"
 #include "view.h"

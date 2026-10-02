@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0-only
 #include <assert.h>
-#include "labwc.h"
+#include "necompositor.h"
 #include "overlay.h"
 #include "view.h"
 #include "theme.h"

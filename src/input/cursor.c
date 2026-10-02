@@ -21,7 +21,7 @@
 #include "input/tablet.h"
 #include "input/tablet-tool.h"
 #include "input/touch.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "layers.h"
 #include "menu/menu.h"
 #include "regions.h"

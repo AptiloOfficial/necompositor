@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <wlr/util/box.h>
 #include "common/macros.h"
-#include "labwc.h"
+#include "necompositor.h"
 #include "snap-constraints.h"
 #include "view.h"
 
