@@ -47,7 +47,7 @@ if git.found()
     version = '"@0@"'.format(git_commit.stdout().strip())
   endif
 endif
-add_project_arguments('-DLABWC_VERSION=@0@'.format(version), language: 'c')
+add_project_arguments('-DNECO_VERSION=@0@'.format(version), language: 'c')
 
 wlroots = dependency(
   'wlroots-0.18',
