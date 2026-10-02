@@ -8,7 +8,7 @@
 - [4. Coding Style](#coding-style)
   - [4.1 Linux Kernel Style Basics](#linux-kernel-style-basics)
   - [4.2 Devault Deviations](#devault-deviations)
-  - [4.3 Labwc Specifics](#labwc-specifics)
+  - [4.3 NeCompositor Specifics](#necompositor-specifics)
     - [4.3.1 API](#api)
     - [4.3.2 The Use of glib](#the-use-of-glib)
     - [4.3.3 The use of GNU extensions](#the-use-of-gnu-extensions)
@@ -49,34 +49,34 @@ meson compile -C build/
 
 ## Debug Logs
 
-Get debug log with `labwc -d`. The log can be directed to a file with `labwc -d
+Get debug log with `necompositor -d`. The log can be directed to a file with `necompositor -d
 2>log.txt`
 
 To see what is happening on the wayland protocol for a specific client, run it
 with environment variable `WAYLAND_DEBUG` set to 1, for example `WAYLAND_DEBUG=1
 foot`.
 
-To see what the compositor is doing on the protocol run `labwc` nested (i.e.
-start labwc from a terminal in another instance of labwc or some other
+To see what the compositor is doing on the protocol run `necompositor` nested (i.e.
+start necompositor from a terminal in another instance of necompositor or some other
 compositor) with `WAYLAND_DEBUG=server`. This filters out anything from clients.
 
 For wayland clients, you can get a live view of some useful info using [wlhax].
 
 ## Output
 
-If you think you've got a damage issue, you can run labwc like this:
-`WLR_SCENE_DEBUG_DAMAGE=highlight labwc` to get a visual indication of damage
+If you think you've got a damage issue, you can run necompositor like this:
+`WLR_SCENE_DEBUG_DAMAGE=highlight necompositor` to get a visual indication of damage
 regions.
 
 To emulate multiple outputs (even if you only have one physical monitor), run
-with `WLR_WL_OUTPUTS=2 labwc` or similar. See [`wlroots/docs/env_vars.md`] for
+with `WLR_WL_OUTPUTS=2 necompositor` or similar. See [`wlroots/docs/env_vars.md`] for
 more options.
 
 For some types of bugs, it might be useful to find out which mesa driver (.so)
-you are using. This can be done with `EGL_LOG_LEVEL=debug labwc 2>&1 | grep
+you are using. This can be done with `EGL_LOG_LEVEL=debug necompositor 2>&1 | grep
 MESA-LOADER`
 
-To rule out driver issues you can run with `WLR_RENDERER=pixman labwc`
+To rule out driver issues you can run with `WLR_RENDERER=pixman necompositor`
 
 You can also get some useful system info with [drm_info].
 
@@ -89,7 +89,7 @@ to analyse keyboard events
 
 # Packaging
 
-Some distributions carry labwc in their repositories or user repositories.
+Some distributions carry necompositor in their repositories or user repositories.
 
 - @ptrcnull (Alpine)
 - @narrat (Arch)
@@ -106,12 +106,12 @@ Some distributions carry labwc in their repositories or user repositories.
 kindly maintain the packages in their respective distro.
 
 Let's keep them informed of new releases and any changes that relate to
-packaging.  If you are maintaining a labwc package for another distro feel free
+packaging.  If you are maintaining a necompositor package for another distro feel free
 to open an issue so we can add you to this list.
 
 # Coding Style
 
-labwc is written in the [Linux kernel coding style] with a small number of
+necompositor is written in the [Linux kernel coding style] with a small number of
 deviations to align with [Drew Devault's preferred coding style] namely:
 
 1. [Function Declaration](https://git.sr.ht/~sircmpwn/cstyle#function-declarations)
@@ -220,7 +220,7 @@ operators (for example `&&`) on the next line.
 	}
 ```
 
-## Labwc Specifics
+## NeCompositor Specifics
 
 ### API
 
@@ -238,10 +238,10 @@ We have a very small, modest API and encourage you to use it.
 5. `ARRAY_SIZE()` to get number of elements in visible array
    [common/macros.h]
 
-[common/mem.h]: https://github.com/labwc/labwc/blob/master/include/common/mem.h
-[common/list.h]: https://github.com/labwc/labwc/blob/master/include/common/list.h
-[common/array.h]: https://github.com/labwc/labwc/blob/master/include/common/array.h
-[common/macros.h]: https://github.com/labwc/labwc/blob/master/include/common/macros.h
+[common/mem.h]: https://github.com/necompositor/necompositor/blob/master/include/common/mem.h
+[common/list.h]: https://github.com/necompositor/necompositor/blob/master/include/common/list.h
+[common/array.h]: https://github.com/necompositor/necompositor/blob/master/include/common/array.h
+[common/macros.h]: https://github.com/necompositor/necompositor/blob/master/include/common/macros.h
 
 ### The Use of glib
 
@@ -263,7 +263,7 @@ and can keep the code simpler.
 For example, if we were going to carry out extensive string manipulation,
 GString and utf8 helpers would be okay. Some functions such as
 `g_utf8_casefold()` would be pretty hard to write from scratch and are fine to
-use. Having said that, labwc does not do much string-mangling.
+use. Having said that, necompositor does not do much string-mangling.
 
 The following functions are used today and are deemed acceptable by the core
 devs:
@@ -380,7 +380,7 @@ Base both bugfixes and new features on `master`.
 
 ### Weblate Instance
 
-Translators can create an account at [LXQt Weblate](https://translate.lxqt-project.org/projects/labwc/labwc/)
+Translators can create an account at [LXQt Weblate](https://translate.lxqt-project.org/projects/necompositor/necompositor/)
 and use the web interface. Adding new languages should work, otherwise the
 administrators can be contacted. Suggestions for improving existing translations
 can be added without account.
@@ -388,12 +388,12 @@ can be added without account.
 ### Github Pull Request
 
 Translators can add their `MY_LOCALE.po` files to the `po` directory
-based on `po/labwc.pot` and issue a pull request. To do this they can
+based on `po/necompositor.pot` and issue a pull request. To do this they can
 generate their `MY_LOCALE.po` file in a few steps:
 
 1. Edit the `po/LINGUAS` file to add their locale code in English
    alphabetical order to the field of locale codes.
-2. Copy the `po/labwc.pot` to `po/MY_LOCALE.po`
+2. Copy the `po/necompositor.pot` to `po/MY_LOCALE.po`
 3. Edit the newly generated `MY_LOCALE.po` file with some of their
 contact and locale details in the header of the file then add the
 translation strings under each English string.
@@ -404,25 +404,25 @@ translation strings under each English string.
 
 Code contributors may need to update relevant files if their additions
 affect UI elements (at the moment only `src/menu/menu.c` and
-`src/config/rcxml.c`). In this case the `po/labwc.pot` file needs to be
+`src/config/rcxml.c`). In this case the `po/necompositor.pot` file needs to be
 updated so that translators can update their translations. Remember,
 many translators are _not_ coders!
 
 The process is fairly trivial however does involve some manual steps.
 
 1. After adding and testing your code additions to satisfaction, backup
-`po/labwc.pot`. You need the custom header from that file for the newly
+`po/necompositor.pot`. You need the custom header from that file for the newly
 generated .pot file in the next step.
 
 2. From the root of the repository run this:
 
 ```
-xgettext --keyword=_ --language=C --add-comments -o po/labwc.pot src/menu/menu.c src/config/rcxml.c
+xgettext --keyword=_ --language=C --add-comments -o po/necompositor.pot src/menu/menu.c src/config/rcxml.c
 ```
 
-This generates a new pot file at `po/labwc.pot`
+This generates a new pot file at `po/necompositor.pot`
 
-3. Copy the header from the original `labwc.pot` to the new one, keeping
+3. Copy the header from the original `necompositor.pot` to the new one, keeping
 the newly generated dates, check for sanity and commit.
 
 # Upversion
@@ -439,13 +439,13 @@ follow the steps to be taken:
 3. In `meson.build` update the version and (if required) the wlroots
    dependency version. Then run `git commit -m 'build: bump version to X.Y.Z'`
 4. Run `git tag -a X.Y.Z`. The first line of the commit message should be
-   "labwc X.Y.Z" and the body should be the `NEWS.md` additions removing
+   "necompositor X.Y.Z" and the body should be the `NEWS.md` additions removing
    hash characters (#) from the headings as these will otherwise be
    ignored by git.
 5. On github, create a 'Release' as some distros use this as a trigger. Set it
    as 'latest release'.
 
-[scope document]: https://github.com/labwc/labwc-scope#readme
+[scope document]: https://github.com/necompositor/necompositor-scope#readme
 [`wlroots/docs/env_vars.md`]: https://gitlab.freedesktop.org/wlroots/wlroots/-/blob/master/docs/env_vars.md
 [wlhax]: https://git.sr.ht/~kennylevinsen/wlhax
 [drm_info]: https://github.com/ascent12/drm_info
