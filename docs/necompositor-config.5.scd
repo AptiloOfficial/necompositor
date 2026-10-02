@@ -1,22 +1,22 @@
-labwc-config(5)
+necompositor-config(5)
 
 # NAME
 
-labwc - configuration files
+necompositor - configuration files
 
 # DESCRIPTION
 
-Labwc uses openbox-3.6 specification for configuration and theming, but does not
-support all options. The following files form the basis of the labwc
+NeCompositor uses openbox-3.6 specification for configuration and theming, but does not
+support all options. The following files form the basis of the necompositor
 configuration: rc.xml, menu.xml, autostart, shutdown, environment and xinitrc.
 
-No configuration files are needed to start and run labwc.
+No configuration files are needed to start and run necompositor.
 
 In accordance with XDG Base Directory Specification, configuration files are
 searched for in the following order:
 
-- ${XDG_CONFIG_HOME:-$HOME/.config}/labwc
-- ${XDG_CONFIG_DIRS:-/etc/xdg}/labwc
+- ${XDG_CONFIG_HOME:-$HOME/.config}/necompositor
+- ${XDG_CONFIG_DIRS:-/etc/xdg}/necompositor
 
 When $XDG_CONFIG_HOME is defined, it replaces (rather than augments)
 $HOME/.config. The same is the case for $XDG_CONFIG_DIRS and /etc/xdg.
@@ -25,7 +25,7 @@ The XDG Base Directory Specification does not specify whether or not programs
 should (a) allow the first-identified configuration file to supersede any
 others, or (b) define rules for merging the information from more than one file.
 
-By default, labwc uses option (a), reading only the first file identified.  With
+By default, necompositor uses option (a), reading only the first file identified.  With
 the --merge-config option, the search order is reserved, but every configuration
 file encountered is processed in turn. Thus, user-specific files will augment
 system-wide configurations, with conflicts favoring the user-specific
@@ -43,47 +43,47 @@ specify keyboard layout settings and cursor size/theme here; see environment
 variable section below for details. Within an XDG Base Directory, a file named
 "environment" will be parsed first, followed by any file matching the glob
 "environment.d/\*.env". Files within the environment.d directory are parsed in
-alphabetical order. Unless the --merge-config option is specified, labwc will
+alphabetical order. Unless the --merge-config option is specified, necompositor will
 consider a particular XDG Base Directory to have provided an environment file if
 that directory contains either the "environment" file or at least one
 "environment.d/\*.env" file.
 
 Note: environment files are treated differently by Openbox, which will simply
 source the file as a valid shell script before running the window manager. Files
-are instead parsed directly by labwc so that environment variables can be
+are instead parsed directly by necompositor so that environment variables can be
 re-loaded on --reconfigure.
 
 Any environment variables referenced as $VARIABLE or ${VARIABLE} will be
 substituted and the tilde (~) will be expanded as the user's home directory.
 
-Please note that as labwc reloads the environment file(s) on reconfigure,
+Please note that as necompositor reloads the environment file(s) on reconfigure,
 recursive/circular assignments (for example FOO=$FOO:bar) should not be made.
 
-The *autostart* file is executed as a shell script after labwc has read its
+The *autostart* file is executed as a shell script after necompositor has read its
 configuration and set variables defined in the environment file. Additionally,
-the environment variables WAYLAND_DISPLAY and (when labwc is built with Xwayland
+the environment variables WAYLAND_DISPLAY and (when necompositor is built with Xwayland
 support) DISPLAY will be defined. This is the place for executing clients for
 handling background images, panels and other tasks that should run automatically
-when labwc launches.
+when necompositor launches.
 
-The *shutdown* file is executed as a shell script when labwc is preparing to
+The *shutdown* file is executed as a shell script when necompositor is preparing to
 terminate itself. All environment variables, including WAYLAND_DISPLAY and
 DISPLAY, will be available to the script. However, because the script runs
 asynchronously with other termination tasks, the shutdown file should not assume
 that the display will be usable. This file is useful to perform any custom
-operations necessary to finalize a labwc session.
+operations necessary to finalize a necompositor session.
 
 The *menu.xml* file defines the context/root-menus and is described in
-labwc-menu(5).
+necompositor-menu(5).
 
 There is a small <theme> section in rc.xml, for example to set rounded corners,
 but the remainder of the theme specification and associated files are described
-in labwc-theme(5).
+in necompositor-theme(5).
 
 *rc.xml* is the main configuration file and all its options are described in
 detail below.
 
-The *xinitrc* file is executed as a shell script whenever labwc launches the
+The *xinitrc* file is executed as a shell script whenever necompositor launches the
 Xwayland X11 server. This may happen multiple times throughout the session if
 Xwayland is not configured to persist when no X11 clients are connected.
 
@@ -93,18 +93,18 @@ This section describes *rc.xml* configuration options.
 
 ## SYNTAX
 
-Configuration must be wrapped in a <labwc_config> root-element like this:
+Configuration must be wrapped in a <necompositor_config> root-element like this:
 
 ```
 <?xml version="1.0"?>
-<labwc_config>
+<necompositor_config>
 
 <!-- settings -->
 
-</labwc_config>
+</necompositor_config>
 ```
 
-*labwc* parses XML in an element/attribute agnostic way. This is a design
+*necompositor* parses XML in an element/attribute agnostic way. This is a design
 decision to increase config file flexibility and keep code simple. In practical
 terms, this means that `<a><b>c</b></a>` is usually equivalent to `<a b="c" />`.
 However, there are some caveats:
@@ -208,21 +208,21 @@ this is for compatibility with Openbox.
 	Note: Enabling this option with atomic mode setting is experimental. If
 	you experience undesirable side effects when tearing is allowed,
 	consider setting the environment variable WLR_DRM_NO_ATOMIC=1 when
-	launching labwc.
+	launching necompositor.
 
 *<core><autoEnableOutputs>* [yes|no]
 	Automatically enable outputs at startup and when new outputs are
 	connected. Default is yes.
 
-	Caution: Disabling this option will make the labwc session unusable
+	Caution: Disabling this option will make the necompositor session unusable
 	unless an external tool such as `wlr-randr` or `kanshi` is used to
 	manage outputs.
 
 *<core><reuseOutputMode>* [yes|no]
 	Try to re-use the existing output mode (resolution / refresh rate).
-	This may prevent unnecessary screenblank delays when starting labwc
+	This may prevent unnecessary screenblank delays when starting necompositor
 	(also known as flicker free boot). If the existing output mode can not
-	be used with labwc the preferred mode of the monitor is used instead.
+	be used with necompositor the preferred mode of the monitor is used instead.
 	Default is no.
 
 *<core><xwaylandPersistence>* [yes|no]
@@ -230,12 +230,12 @@ this is for compatibility with Openbox.
 	using a "lazy" policy that allows the server to launch on demand and die
 	when it is no longer needed.
 
-	When labwc is compiled with wlroots 0.18.2 or later, the default is no.
-	When labwc is compiled with wlroots < 0.18.2, the default is yes to
+	When necompositor is compiled with wlroots 0.18.2 or later, the default is no.
+	When necompositor is compiled with wlroots < 0.18.2, the default is yes to
 	avoid a wlroots bug that can result in compositor crashes when
 	performing drag-and-drop actions when the XWayland server is shut down.
 
-	Note: changing this setting requires a restart of labwc.
+	Note: changing this setting requires a restart of necompositor.
 
 ## PLACEMENT
 
@@ -391,7 +391,7 @@ this is for compatibility with Openbox.
 
 *<focus><followMouseRequiresMovement>* [yes|no]
 	Requires cursor movement if followMouse is enabled. It is the same
-	as the "underMouse" setting in Openbox. If set to "no", labwc will
+	as the "underMouse" setting in Openbox. If set to "no", necompositor will
 	additionally focus the window under the cursor in all situations
 	which change the position of a window (e.g. switching workspaces,
 	opening/closing windows). Focusing a different window via A-Tab is
@@ -467,7 +467,7 @@ extending outward from the snapped edge.
 	Define workspaces. A workspace covers all outputs. Workspaces can be
 	switched to with GoToDesktop and windows can be moved with
 	SendToDesktop.
-	See labwc-actions(5) for more information about their arguments.
+	See necompositor-actions(5) for more information about their arguments.
 
 	The number attribute defines the minimum number of workspaces. Default
 	is 1. The number attribute is optional. If the number attribute is
@@ -492,7 +492,7 @@ extending outward from the snapped edge.
 	The name of the icon to use as a fallback when the application icon
 	(e.g. window icon in the titlebar) is not available. The name follows
 	the ones specified in "Icon=" entries in desktop files.
-	Default is 'labwc'.
+	Default is 'necompositor'.
 
 *<theme><titlebar><layout>*
 	Selection and order of buttons in a window's titlebar.
@@ -671,7 +671,7 @@ extending outward from the snapped edge.
 	```
 
 *<keyboard><keybind key=""><action name="">*
-	Keybind action. See labwc-actions(5).
+	Keybind action. See necompositor-actions(5).
 
 *<keyboard><default />*
 	Load the default keybinds listed below. This is an addition to the
@@ -779,7 +779,7 @@ extending outward from the snapped edge.
 
 ```
 <?xml version="1.0"?>
-<labwc_config>
+<necompositor_config>
 <mouse>
   <default />
   <context name="Frame">
@@ -791,7 +791,7 @@ extending outward from the snapped edge.
     </mousebind>
   </context>
 </mouse>
-</labwc_config>
+</necompositor_config>
 ```
 
 *<mouse><default />*
@@ -1181,7 +1181,7 @@ situation.
 
 *<menu><showIcons>*
 	Show menu icons based on the `icon` attribute of menu label elements.
-	Default is yes. Requires libsfdo. If labwc is built without it, no
+	Default is yes. Requires libsfdo. If necompositor is built without it, no
 	icons will be shown.
 
 ## MAGNIFIER
@@ -1235,4 +1235,4 @@ See xkeyboard-config(7) for details.
 
 # SEE ALSO
 
-labwc(1), labwc-actions(5), labwc-theme(5)
+necompositor(1), necompositor-actions(5), necompositor-theme(5)

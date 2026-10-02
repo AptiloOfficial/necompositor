@@ -1,13 +1,13 @@
-labwc-menu(5)
+necompositor-menu(5)
 
 # NAME
 
-labwc - menu file
+necompositor - menu file
 
 # DESCRIPTION
 
 Static menus are built based on the menu.xml file located at
-"~/.config/labwc" and equivalent XDG Base Directories.
+"~/.config/necompositor" and equivalent XDG Base Directories.
 
 # SYNTAX
 
@@ -71,7 +71,7 @@ The menu file must be entirely enclosed within <openbox_menu> and
 	defining a menu unless it is the topmost menu element.
 
 	Note that Openbox requires a label="" defined for topmost elements too,
-	but for simplicity labwc handles these with or without the label
+	but for simplicity necompositor handles these with or without the label
 	attribute.
 
 *menu.icon*
@@ -91,7 +91,7 @@ The menu file must be entirely enclosed within <openbox_menu> and
 	icon="/usr/share/icons/hicolor/16x16/apps/vlc.png".
 
 *menu.item.action*
-	See labwc-actions(5). Note: XML CDATA is supported for this node in
+	See necompositor-actions(5). Note: XML CDATA is supported for this node in
 	order to maintain compatibility with obmenu-generator.
 
 *menu.separator*
@@ -109,7 +109,7 @@ The menu file must be entirely enclosed within <openbox_menu> and
 
 Pipe menus are menus generated dynamically based on output of scripts or
 binaries. They are so-called because the output of the executable is piped to
-the labwc menu.
+the necompositor menu.
 
 For any *<menu id="" label="" execute="COMMAND"/>* entry in menu.xml, the
 COMMAND will be executed the first time the item is selected (for example by
@@ -156,4 +156,4 @@ interpreted as a user-override.
 
 # SEE ALSO
 
-labwc(1), labwc-actions(5), labwc-config(5), labwc-theme(5)
+necompositor(1), necompositor-actions(5), necompositor-config(5), necompositor-theme(5)
