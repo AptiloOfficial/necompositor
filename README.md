@@ -159,5 +159,3 @@ Original codebase © the LabWC contributors.
 * **Openbox** — The inspiration behind the configuration layout
 
 Maintained with care by @AptiloOfficial.
-
-note: this readme needs finish later
