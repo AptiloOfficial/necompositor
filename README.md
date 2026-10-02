@@ -1,308 +1,163 @@
-# labwc
-
-<h3 align="center">[<a
-href="https://labwc.github.io/">Website</a>] [<a
-href="https://github.com/labwc/labwc-scope#readme">Scope</a>] [<a
-href="https://web.libera.chat/gamja/?channels=#labwc">IRC&nbsp;Channel</a>] [<a
-href="NEWS.md">Release&nbsp;Notes</a>]</h3>
-
-- [1. Project Description](#1-project-description)
-  - [1.1 What Is This?](#11-what-is-this)
-  - [1.2 Why](#12-why)
-  - [1.3 Why The Openbox Theme Specification?](#13-why-the-openbox-theme-specification)
-  - [1.4 Very High Level Scope](#14-very-high-level-scope)
-  - [1.5 Videos](#15-videos)
-  - [1.6 Screenshot](#16-screenshot)
-- [2. Build and Installation](#2-build-and-installation)
-- [3. Configuration](#3-configuration)
-- [4. Theming](#4-theming)
-- [5. Translations](#5-translations)
-- [6. Usage](#6-usage)
-  - [6.1 Gaming](#61-gaming)
-- [7. Integration](#7-integration)
-
-## 1. Project Description
-
-### 1.1 What Is This?
-
-Labwc stands for Lab Wayland Compositor, where lab can mean any of the
-following:
-
-- Lightweight And Box-inspired
-- sense of experimentation and treading new ground
-- inspired by BunsenLabs and ArchLabs
-- your favorite pet
-
-Labwc is a [wlroots]-based window-stacking compositor for [wayland], inspired
-by [openbox].
-
-It is light-weight and independent with a focus on simply stacking windows well
-and rendering some window decorations. It takes a no-bling/frills approach and
-says no to features such as animations.  It relies on clients for panels,
-screenshots, wallpapers and so on to create a full desktop environment.
-
-Labwc tries to stay in keeping with [wlroots] and [sway] in terms of general
-approach and coding style.
-
-Labwc has no reliance on any particular Desktop Environment, Desktop Shell or
-session. Nor does it depend on any UI toolkits such as Qt or GTK.
-
-### 1.2 Why?
-
-Firstly, we believe that there is a need for a simple Wayland window-stacking
-compositor which strikes a balance between minimalism and bloat approximately
-at the level where Window Managers like Openbox reside in the X11 domain.  Most
-of the core developers are accustomed to low resource Desktop Environments such
-as Mate/XFCE or standalone Window Managers such as Openbox under X11.  Labwc
-aims to make a similar setup possible under Wayland, with small and independent
-components rather than a large, integrated software eco-system.
-
-Secondly, the Wayland community has achieved an amazing amount so far, and we
-want to help solve the unsolved problems to make Wayland viable for more
-people. We think that standardisation and de-fragmentation is a route to
-greater Wayland adoption, and wanting to play our part in this, Labwc only
-understands [wayland-protocols] &amp; [wlr-protocols], and it cannot be
-controlled with dbus, sway/i3/custom-IPC or other technology.
-
-Thirdly, it is important to us that scope is tightly controlled so that the
-compositor matures to production quality. On the whole, we value robustness,
-reliability, stability and simplicity over new features. Coming up with new
-ideas and features is easy - maintaining and stabilising them is not.
 
-Fourthly, we are of the view that a compositor should be boring in order to do
-its job well. In this regard we follow in the footsteps of [metacity] which
-describes itself as a "Boring window manager for the adult in you. Many window
-managers are like Marshmallow Froot Loops; Metacity is like Cheerios."
+# NeCompositor
 
-Finally, we think that an elegant solution to all of this does not need to feel
-square and pixelated like something out of the 1990s, but should look
-contemporary and enable cutting-edge performance.
+A lightweight **Wayland stacking compositor** built for fast, no-nonsense Linux desktops.
 
-### 1.3 Why The Openbox Theme Specification?
+NeCompositor is a lean fork of [LabWC](https://github.com/labwc/labwc), crafted with three things in mind: minimalism, predictable behavior, and minimal resource usage. Whether you're building a lightweight desktop setup from scratch or just want a rock-solid, snappy Wayland compositor on your favorite distro, NeCompositor gets out of your way and does the job.
 
-In order to avoid reinventing configuration and theme syntaxes, the [openbox]
-3.6 specification is used. This does not mean that labwc is an openbox clone
-but rather that configuration files will look and feel familiar.
+It serves as the flagship compositor for the [NeDE](https://github.com/AptiloOfficial/nede), and works perfectly as a standalone session.
 
-Also, parsing GTK3+ and Qt themes for window decorations is very complicated,
-so using much simpler specs such as those used by openbox and xfwm makes sense
-for a compositor such as labwc, both in terms of implementation and for user
-modification.
+## What’s Under the Hood?
 
-Openbox spec is somewhat of a stable standard considering how long it has
-remained unchanged for and how wide-spread its adoption is by lightweight
-distributions such as LXDE, LXQt, BunsenLabs, ArchLabs, Mabox and Raspbian. Some
-widely used themes (for example Numix and Arc) have built-in support.
+NeCompositor stands on the shoulders of the incredible [LabWC](https://github.com/labwc/labwc) project. Huge thanks to Johan Malm, Consolatis, tokyo4j, and the 100+ contributors who built the foundation we rely on.
 
-We could have invented a whole new syntax, but that's not where we want to
-spend our effort.
+## Current State
 
-### 1.4 Very High Level Scope
+It’s an active, early-stage fork — but it's daily-driver material and rock solid for everyday use.
 
-A lot of emphasis is put on code simplicity when considering features.
+## Highlights
 
-The main development effort is focused on producing a solid foundation for a
-stacking compositor rather than adding configuration and theming options.
+* Openbox-inspired stacking window management
+* Clean, XDG-compliant configuration setup
+* Full support for both client-side (CSD) and server-side (SSD) decorations
+* Crisp HiDPI scaling out of the box
+* Rich protocol support via wlroots: `output-management`, `layer-shell`, and `foreign-toplevel`
+* Drop-in compatibility with Openbox themes
+* XWayland is disabled by default in standard builds for a smaller memory footprint
 
-See [scope] for full details on implemented features.
+## Where It Fits In
 
-High-level summary of items that Labwc supports:
+NeCompositor is the default compositor driving **NeDE** — a lightweight, C-based GTK3 desktop environment.
 
-- [x] Config files (rc.xml, autostart, shutdown, environment, menu.xml)
-- [x] Theme files and xbm/png/svg icons
-- [x] Basic desktop and client menus
-- [x] HiDPI
-- [x] wlroots protocols such as `output-management`, `layer-shell` and
-  `foreign-toplevel`
-- [x] Optionally xwayland
+That said, it isn't locked into any ecosystem. You can drop it into any Wayland session and pair it with your favorite panel, launcher, or status bar.
 
-### 1.5 Videos
+## Getting Configured
 
-| video link                | date        | duration
-| ------------------------- | ------------| -------
-| [0.8.3-release-video]     | 03-Mar-2025 | 2:35
-| [0.7.2-release-video]     | 24-May-2024 | 3:17
-| [0.6.0-release-video]     | 31-Oct-2022 | 2:48
-| [0.3.0-release-video]     | 05-Aug-2021 | 1:10
-| [pre-0.1.0-release-video] | 25-Feb-2021 | 3:42
+Your configuration lives in `~/.config/necompositor/`:
 
-[0.8.3-release-video]: https://youtu.be/HGzqci_THwA
-[0.7.2-release-video]: https://youtu.be/gNIj6VU-IH8
-[0.6.0-release-video]: https://youtu.be/guBnx18EQiA
-[0.3.0-release-video]: https://youtu.be/AU_M3n_FS-E
-[pre-0.1.0-release-video]: https://youtu.be/rE1bQjSVJzg
+| File | What it does |
+| --- | --- |
+| `rc.xml` | Primary config file (LabWC-compatible XML format) |
+| `menu.xml` | Desktop context menu layout |
+| `autostart` | Shell script triggered at launch |
+| `shutdown` | Shell script triggered on exit |
+| `environment` | Custom environment variables |
+| `themerc` | Theme overrides |
 
-### 1.6 Screenshot
+*No config? No problem.* NeCompositor ships with sensible built-in defaults, so it works right out of the box.
 
-The obligatory screenshot:
+To reload your changes on the fly:
 
-<a href="https://labwc.github.io/img/scrot1.png">
-  <img src="https://labwc.github.io/img/scrot1-small.png">
-</a><br />
-<a href="https://labwc.github.io/obligatory-screenshot.html">
-  <small>Screenshot description</small>
-</a>
+```bash
+necompositor --reconfigure
 
-## 2. Build and Installation
+```
 
-To build, simply run:
+## Custom Themes
 
-    meson setup build/
-    meson compile -C build/
+NeCompositor looks for themes in these directories (using the first match it finds):
 
-Run-time dependencies include:
+```text
+~/.local/share/themes/<theme-name>/necompositor/themerc
+~/.themes/<theme-name>/necompositor/themerc
+/usr/share/themes/<theme-name>/necompositor/themerc
 
-- wlroots, wayland, libinput, xkbcommon
-- libxml2, cairo, pango, glib-2.0
-- libpng
-- librsvg >=2.46 (optional)
-- libsfdo (optional)
-- xwayland, xcb (optional)
+```
 
-Build dependencies include:
+It fully supports classic Openbox themes. Check out `docs/themerc` for a complete reference guide.
 
-- meson, ninja, gcc/clang
-- wayland-protocols
+## Building from Source
 
-Disable xwayland with `meson -Dxwayland=disabled build/`
+```bash
+meson setup build --prefix=/usr --wrap-mode=nofallback
+ninja -C build
+sudo ninja -C build install
 
-For OS/distribution specific details see [wiki].
+```
 
-If the right version of `wlroots` is not found on the system, the build setup
-will automatically download the wlroots repo. If this fallback is not desired
-please use:
+### Runtime Dependencies
 
-    meson setup --wrap-mode=nodownload build/
+* `wlroots 0.18`
+* `wayland-server ≥ 1.24`
+* `libinput`, `xkbcommon`
+* `libxml2`, `cairo`, `pango`, `glib-2.0`
+* `libpng`
+* `librsvg ≥ 2.46` *(optional)*
+* `libsfdo` *(optional)*
 
-To enforce the supplied wlroots.wrap file, run:
+*Note: XWayland isn't required and stays off by default.*
 
-    meson setup --force-fallback-for=wlroots build/
+### Build Dependencies
 
-If installing after using the wlroots.wrap file, use the following to
-prevent installing the wlroots headers:
+* `meson`, `ninja`
+* `gcc` or `clang`
+* `wayland-protocols`
 
-    meson install --skip-subprojects -C build/
+### Want XWayland support?
 
-## 3. Configuration
+Just enable the flag during setup:
 
-User config files are located at `${XDG_CONFIG_HOME:-$HOME/.config/labwc/}`
-with the following six files being used: [rc.xml], [menu.xml], [autostart], [shutdown],
-[environment] and [themerc-override].
+```bash
+meson setup build -Dxwayland=enabled
 
-Run `labwc --reconfigure` to reload configuration and theme.
+```
 
-For a step-by-step initial configuration guide, see [getting-started].
+## How to Run It
 
-## 4. Theming
+Fire it up straight from a TTY or your preferred display manager:
 
-Themes are located at `~/.local/share/themes/\<theme-name\>/labwc/` or
-equivalent `XDG_DATA_{DIRS,HOME}` location in accordance with freedesktop XDG
-directory specification.
+```bash
+necompositor
 
-For full theme options, see [labwc-theme(5)] or the [themerc] example file.
+```
 
-For themes, search the internet for "openbox themes" and place them in
-`~/.local/share/themes/`. Some good starting points include:
+### Keybindings
 
-- https://github.com/addy-dclxvi/openbox-theme-collections
-- https://github.com/the-zero885/Lubuntu-Arc-Round-Openbox-Theme
-- https://github.com/BunsenLabs/bunsen-themes
+If you don't have a custom `rc.xml` yet, here are the default shortcuts:
 
-## 5. Translations
+| Shortcut | Action |
+| --- | --- |
+| Super-Return | Launch terminal |
+| Super-Q | Close active window |
+| Super-A | Toggle maximize window |
+| Alt-Tab | Switch to next window |
+| Alt-Shift-Tab | Switch to previous window |
+| Alt-F4 | Close active window |
+| Alt + Left Click | Drag/move window |
+| Alt + Right Click | Resize window |
+| Alt + Arrow | Snap window to screen edge |
+| Super + Arrow | Tile window to half screen |
 
-The default window bar menu can be translated on the [weblate platform](https://translate.lxqt-project.org/projects/labwc/labwc/).
+Click anywhere on the desktop wallpaper to open the root menu.
 
-<a href="https://translate.lxqt-project.org/engage/labwc/?utm_source=widget">
-<img src="https://translate.lxqt-project.org/widgets/labwc/-/labwc/multi-blue.svg" alt="Translation status" />
-</a>
+## Gaming & Cursor Lock
 
-## 6. Usage
+Cursor confinement has been supported since LabWC 0.6.2. If you're running older kernels or hit issues with specific titles, spinning up a nested `gamescope` instance does the trick:
 
-    ./build/labwc [-s <command>]
+```bash
+gamescope -f -- %command%
 
-> **_NOTE:_** If you are running on **NVIDIA**, you will need the
-> `nvidia-drm.modeset=1` kernel parameter.
+```
 
-If you have not created an rc.xml config file, default bindings will be:
+## Project Heritage
 
-| combination              | action
-| ------------------------ | ------
-| `alt`-`tab`              | activate next window
-| `alt`-`shift`-`tab`      | activate previous window
-| `super`-`return`         | alacritty
-| `alt`-`F3`               | bemenu
-| `alt`-`F4`               | close window
-| `super`-`a`              | toggle maximize
-| `alt`-`mouse-left`       | move window
-| `alt`-`mouse-right`      | resize window
-| `alt`-`arrow`            | move window to edge
-| `super`-`arrow`          | resize window to fill half the output
-| `alt`-`space`            | show the window menu
-| `XF86_AudioLowerVolume`  | amixer sset Master 5%-
-| `XF86_AudioRaiseVolume`  | amixer sset Master 5%+
-| `XF86_AudioMute`         | amixer sset Master toggle
-| `XF86_MonBrightnessUp`   | brightnessctl set +10%
-| `XF86_MonBrightnessDown` | brightnessctl set 10%-
+NeCompositor originated as a fork of LabWC 0.8.4. Every original commit and contributor credit remains fully intact in our git history. Run `git log` to explore the lineage.
 
-A root-menu can be opened by clicking on the desktop.
+* **Upstream:** [https://github.com/labwc/labwc](https://github.com/labwc/labwc)
+* **This Fork:** [https://github.com/AptiloOfficial/necompositor](https://github.com/AptiloOfficial/necompositor)
 
-### 6.1 Gaming
+## License
 
-Cursor confinement is supported from version `0.6.2`. If using older versions,
-use a nested [gamescope] instance for gaming.  It can be added to steam via
-game launch option: `gamescope -f -- %command%`.
+GPL-2.0-only. Grab the details in the `LICENSE` file. 
 
-## 7. Integration
+Original codebase © the LabWC contributors.
 
-Suggested apps to use with labwc:
+## See Also
 
-- Screen shooter: [grim]
-- Screen recorder: [wf-recorder]
-- Background image: [swaybg]
-- Panel: [waybar], [yambar], [lavalauncher], [sfwbar], [xfce4-panel]
-- Launchers: [bemenu], [fuzzel], [wofi]
-- Output managers: [wlopm], [kanshi], [wlr-randr]
-- Screen locker: [swaylock]
-- Gamma adjustment: [gammastep]
+* **LabWC** — The upstream project that started it all
+* **wlroots** — The core library driving the compositor
+* **Openbox** — The inspiration behind the configuration layout
 
-See [integration] for further details.
+Maintained with care by @AptiloOfficial.
 
-[wayland]: https://wayland.freedesktop.org/
-[openbox]: https://openbox.org/help/Contents
-[wlroots]: https://gitlab.freedesktop.org/wlroots/wlroots
-[sway]: https://github.com/swaywm
-[wayland-protocols]: https://gitlab.freedesktop.org/wayland/wayland-protocols
-[wlr-protocols]: https://gitlab.freedesktop.org/wlroots/wlr-protocols
-[scope]: https://github.com/labwc/labwc-scope#readme
-[wiki]: https://github.com/labwc/labwc/wiki
-[getting-started]: https://labwc.github.io/getting-started.html
-[integration]: https://labwc.github.io/integration.html
-[metacity]: https://github.com/GNOME/metacity
-
-[rc.xml]: docs/rc.xml.all
-[menu.xml]: docs/menu.xml
-[autostart]: docs/autostart
-[shutdown]: docs/shutdown
-[environment]: docs/environment
-[themerc-override]: docs/themerc
-[themerc]: docs/themerc
-[labwc-theme(5)]: https://labwc.github.io/labwc-theme.5.html
-
-[gamescope]: https://github.com/Plagman/gamescope
-[grim]: https://github.com/emersion/grim
-[wf-recorder]: https://github.com/ammen99/wf-recorder
-[swaybg]: https://github.com/swaywm/swaybg
-[waybar]: https://github.com/Alexays/Waybar
-[yambar]: https://codeberg.org/dnkl/yambar
-[lavalauncher]: https://sr.ht/~leon_plickat/LavaLauncher
-[sfwbar]: https://github.com/LBCrion/sfwbar
-[xfce4-panel]: https://gitlab.xfce.org/xfce/xfce4-panel
-[bemenu]: https://github.com/Cloudef/bemenu
-[fuzzel]: https://codeberg.org/dnkl/fuzzel
-[wofi]: https://hg.sr.ht/~scoopta/wofi
-[wlopm]: https://git.sr.ht/~leon_plickat/wlopm
-[kanshi]: https://sr.ht/~emersion/kanshi/
-[wlr-randr]: https://sr.ht/~emersion/wlr-randr/
-[swaylock]: https://github.com/swaywm/swaylock
-[gammastep]: https://gitlab.com/chinstrap/gammastep
-
+note: this readme needs finish later
