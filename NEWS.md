@@ -1,4 +1,4 @@
-# Introduction
+# Introduction (.md by LabWC)
 
 This file contains significant user-visible changes for each version.
 For full changelog, use `git log`.
