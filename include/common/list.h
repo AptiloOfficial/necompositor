@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_LIST_H
-#define LABWC_LIST_H
+#ifndef NECO_LIST_H
+#define NECO_LIST_H
 #include <wayland-server-core.h>
 
 /**
@@ -29,4 +29,4 @@ wl_list_append(struct wl_list *list, struct wl_list *elm)
  */
 #define WL_LIST_INIT(head) {.prev = (head), .next = (head)}
 
-#endif /* LABWC_LIST_H */
+#endif /* NECO_LIST_H */

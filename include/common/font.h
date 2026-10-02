@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_FONT_H
-#define LABWC_FONT_H
+#ifndef NECO_FONT_H
+#define NECO_FONT_H
 #include <pango/pango-font.h>
 
 struct lab_data_buffer;
@@ -51,4 +51,4 @@ void font_buffer_create(struct lab_data_buffer **buffer, int max_width,
  */
 void font_finish(void);
 
-#endif /* LABWC_FONT_H */
+#endif /* NECO_FONT_H */

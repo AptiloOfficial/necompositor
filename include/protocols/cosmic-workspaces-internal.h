@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_PROTOCOLS_COSMIC_WORKSPACES_INTERNAL_H
-#define LABWC_PROTOCOLS_COSMIC_WORKSPACES_INTERNAL_H
+#ifndef NECO_PROTOCOLS_COSMIC_WORKSPACES_INTERNAL_H
+#define NECO_PROTOCOLS_COSMIC_WORKSPACES_INTERNAL_H
 
 struct lab_cosmic_workspace;
 struct lab_cosmic_workspace_group;
@@ -21,4 +21,4 @@ void cosmic_group_output_send_initial_state(struct lab_cosmic_workspace_group *g
 
 void cosmic_manager_schedule_done_event(struct lab_cosmic_workspace_manager *manager);
 
-#endif /* LABWC_PROTOCOLS_COSMIC_WORKSPACES_INTERNAL_H */
+#endif /* NECO_PROTOCOLS_COSMIC_WORKSPACES_INTERNAL_H */

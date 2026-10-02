@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_TABLET_H
-#define LABWC_TABLET_H
+#ifndef NECO_TABLET_H
+#define NECO_TABLET_H
 
 #include <wayland-server-core.h>
 #include <wlr/types/wlr_tablet_v2.h>
@@ -32,4 +32,4 @@ void tablet_init(struct seat *seat);
 void tablet_finish(struct seat *seat);
 void tablet_create(struct seat *seat, struct wlr_input_device *wlr_input_device);
 
-#endif /* LABWC_TABLET_H */
+#endif /* NECO_TABLET_H */

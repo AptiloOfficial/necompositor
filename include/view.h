@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_VIEW_H
-#define LABWC_VIEW_H
+#ifndef NECO_VIEW_H
+#define NECO_VIEW_H
 
 #include "config/rcxml.h"
 #include "config.h"
@@ -614,4 +614,4 @@ enum view_placement_policy view_placement_parse(const char *policy);
 /* xdg.c */
 struct wlr_xdg_surface *xdg_surface_from_view(struct view *view);
 
-#endif /* LABWC_VIEW_H */
+#endif /* NECO_VIEW_H */

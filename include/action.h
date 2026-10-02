@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_ACTION_H
-#define LABWC_ACTION_H
+#ifndef NECO_ACTION_H
+#define NECO_ACTION_H
 
 #include <stdbool.h>
 #include <wayland-util.h>
@@ -50,4 +50,4 @@ void actions_run(struct view *activator, struct server *server,
 void action_free(struct action *action);
 void action_list_free(struct wl_list *action_list);
 
-#endif /* LABWC_ACTION_H */
+#endif /* NECO_ACTION_H */

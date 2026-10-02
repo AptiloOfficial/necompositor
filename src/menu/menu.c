@@ -548,7 +548,7 @@ entry(xmlNode *node, char *nodename, char *content)
 	}
 	string_truncate_at_pattern(nodename, ".openbox_menu");
 	string_truncate_at_pattern(nodename, ".openbox_pipe_menu");
-	if (getenv("LABWC_DEBUG_MENU_NODENAMES")) {
+	if (getenv("NECO_DEBUG_MENU_NODENAMES")) {
 		printf("%s: %s\n", nodename, content ? content : (char *)cdata);
 	}
 	if (in_item) {

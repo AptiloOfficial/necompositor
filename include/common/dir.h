@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_DIR_H
-#define LABWC_DIR_H
+#ifndef NECO_DIR_H
+#define NECO_DIR_H
 
 #include <wayland-server-core.h>
 
@@ -17,4 +17,4 @@ void paths_theme_create(struct wl_list *paths, const char *theme_name,
 	const char *filename);
 void paths_destroy(struct wl_list *paths);
 
-#endif /* LABWC_DIR_H */
+#endif /* NECO_DIR_H */

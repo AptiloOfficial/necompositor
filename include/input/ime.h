@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
 
-#ifndef LABWC_IME_H
-#define LABWC_IME_H
+#ifndef NECO_IME_H
+#define NECO_IME_H
 
 #include <wlr/types/wlr_text_input_v3.h>
 #include <wlr/types/wlr_input_method_v2.h>

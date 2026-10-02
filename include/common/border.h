@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_BORDER_H
-#define LABWC_BORDER_H
+#ifndef NECO_BORDER_H
+#define NECO_BORDER_H
 
 struct border {
 	int top;
@@ -9,4 +9,4 @@ struct border {
 	int left;
 };
 
-#endif /* LABWC_BORDER_H */
+#endif /* NECO_BORDER_H */

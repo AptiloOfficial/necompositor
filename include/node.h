@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_NODE_DESCRIPTOR_H
-#define LABWC_NODE_DESCRIPTOR_H
+#ifndef NECO_NODE_DESCRIPTOR_H
+#define NECO_NODE_DESCRIPTOR_H
 #include <wlr/types/wlr_scene.h>
 
 struct view;
@@ -90,4 +90,4 @@ struct ssd_button *node_ssd_button_from_node(
 struct scaled_scene_buffer *node_scaled_scene_buffer_from_node(
 	struct wlr_scene_node *wlr_scene_node);
 
-#endif /* LABWC_NODE_DESCRIPTOR_H */
+#endif /* NECO_NODE_DESCRIPTOR_H */

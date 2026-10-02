@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_ARRAY_H
-#define LABWC_ARRAY_H
+#ifndef NECO_ARRAY_H
+#define NECO_ARRAY_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <wayland-server-core.h>
@@ -73,4 +73,4 @@ wl_array_len(struct wl_array *array)
 		*_entry = (_val);                            \
 	} while (0)
 
-#endif /* LABWC_ARRAY_H */
+#endif /* NECO_ARRAY_H */

@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_FILE_HELPERS_H
-#define LABWC_FILE_HELPERS_H
+#ifndef NECO_FILE_HELPERS_H
+#define NECO_FILE_HELPERS_H
 #include <stdbool.h>
 
 /**
@@ -9,4 +9,4 @@
  */
 bool file_exists(const char *filename);
 
-#endif /* LABWC_FILE_HELPERS_H */
+#endif /* NECO_FILE_HELPERS_H */

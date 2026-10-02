@@ -5,8 +5,8 @@
  * Copyright Johan Malm 2020
  */
 
-#ifndef LABWC_GRAB_FILE_H
-#define LABWC_GRAB_FILE_H
+#ifndef NECO_GRAB_FILE_H
+#define NECO_GRAB_FILE_H
 
 #include "common/buf.h"
 
@@ -17,4 +17,4 @@
  */
 struct buf grab_file(const char *filename);
 
-#endif /* LABWC_GRAB_FILE_H */
+#endif /* NECO_GRAB_FILE_H */

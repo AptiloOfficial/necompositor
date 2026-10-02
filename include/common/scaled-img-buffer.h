@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_SCALED_IMG_BUFFER_H
-#define LABWC_SCALED_IMG_BUFFER_H
+#ifndef NECO_SCALED_IMG_BUFFER_H
+#define NECO_SCALED_IMG_BUFFER_H
 
 #include <stdbool.h>
 
@@ -69,4 +69,4 @@ struct scaled_img_buffer *scaled_img_buffer_create(struct wlr_scene_tree *parent
 /* Obtain scaled_img_buffer from wlr_scene_node */
 struct scaled_img_buffer *scaled_img_buffer_from_node(struct wlr_scene_node *node);
 
-#endif /* LABWC_SCALED_IMG_BUFFER_H */
+#endif /* NECO_SCALED_IMG_BUFFER_H */

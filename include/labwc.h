@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_H
-#define LABWC_H
+#ifndef NECO_H
+#define NECO_H
 #include "config.h"
 #include <getopt.h>
 #include <stdbool.h>
@@ -589,4 +589,4 @@ void create_constraint(struct wl_listener *listener, void *data);
 void constrain_cursor(struct server *server, struct wlr_pointer_constraint_v1
 	*constraint);
 
-#endif /* LABWC_H */
+#endif /* NECO_H */

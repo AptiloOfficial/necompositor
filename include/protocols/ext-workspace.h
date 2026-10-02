@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_PROTOCOLS_EXT_WORKSPACES_H
-#define LABWC_PROTOCOLS_EXT_WORKSPACES_H
+#ifndef NECO_PROTOCOLS_EXT_WORKSPACES_H
+#define NECO_PROTOCOLS_EXT_WORKSPACES_H
 
 #include <stdbool.h>
 #include <wayland-server-core.h>
@@ -106,4 +106,4 @@ void lab_ext_workspace_set_coordinates(struct lab_ext_workspace *workspace,
 
 void lab_ext_workspace_destroy(struct lab_ext_workspace *workspace);
 
-#endif /* LABWC_PROTOCOLS_EXT_WORKSPACES_H */
+#endif /* NECO_PROTOCOLS_EXT_WORKSPACES_H */

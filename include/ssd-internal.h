@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_SSD_INTERNAL_H
-#define LABWC_SSD_INTERNAL_H
+#ifndef NECO_SSD_INTERNAL_H
+#define NECO_SSD_INTERNAL_H
 
 #include <wlr/util/box.h>
 #include "common/macros.h"
@@ -176,4 +176,4 @@ void ssd_shadow_create(struct ssd *ssd);
 void ssd_shadow_update(struct ssd *ssd);
 void ssd_shadow_destroy(struct ssd *ssd);
 
-#endif /* LABWC_SSD_INTERNAL_H */
+#endif /* NECO_SSD_INTERNAL_H */

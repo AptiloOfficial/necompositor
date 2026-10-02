@@ -5,8 +5,8 @@
  * Copyright Johan Malm 2020
  */
 
-#ifndef LABWC_BUF_H
-#define LABWC_BUF_H
+#ifndef NECO_BUF_H
+#define NECO_BUF_H
 
 struct buf {
 	/**
@@ -98,4 +98,4 @@ void buf_reset(struct buf *s);
  */
 void buf_move(struct buf *dst, struct buf *src);
 
-#endif /* LABWC_BUF_H */
+#endif /* NECO_BUF_H */

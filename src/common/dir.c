@@ -93,7 +93,7 @@ build_theme_path_openbox(struct ctx *ctx, char *prefix, const char *path)
 static void
 find_dir(struct ctx *ctx)
 {
-	char *debug = getenv("LABWC_DEBUG_DIR_CONFIG_AND_THEME");
+	char *debug = getenv("NECO_DEBUG_DIR_CONFIG_AND_THEME");
 
 	struct buf prefix = BUF_INIT;
 	for (int i = 0; ctx->dirs[i].path; i++) {

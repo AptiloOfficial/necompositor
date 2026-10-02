@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_STRING_HELPERS_H
-#define LABWC_STRING_HELPERS_H
+#ifndef NECO_STRING_HELPERS_H
+#define NECO_STRING_HELPERS_H
 #include <stdbool.h>
 
 /**
@@ -101,4 +101,4 @@ bool str_starts_with(const char *s, char needle, const char *ignore_chars);
  */
 bool str_equal(const char *a, const char *b);
 
-#endif /* LABWC_STRING_HELPERS_H */
+#endif /* NECO_STRING_HELPERS_H */

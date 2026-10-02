@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_PARSE_BOOL_H
-#define LABWC_PARSE_BOOL_H
+#ifndef NECO_PARSE_BOOL_H
+#define NECO_PARSE_BOOL_H
 #include <stdbool.h>
 #include "common/three-state.h"
 
@@ -31,4 +31,4 @@ int parse_bool(const char *str, int default_value);
 void set_bool(const char *str, bool *variable);
 void set_bool_as_int(const char *str, int *variable);
 
-#endif /* LABWC_PARSE_BOOL_H */
+#endif /* NECO_PARSE_BOOL_H */

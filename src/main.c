@@ -67,9 +67,9 @@ die_on_detecting_suid(void)
 static void
 send_signal_to_labwc_pid(int signal)
 {
-	char *neco_pid = getenv("LABWC_PID");
+	char *neco_pid = getenv("NECO_PID");
 	if (!neco_pid) {
-		wlr_log(WLR_ERROR, "LABWC_PID not set");
+		wlr_log(WLR_ERROR, "NECO_PID not set");
 		exit(EXIT_FAILURE);
 	}
 	int pid = atoi(neco_pid);
@@ -149,7 +149,7 @@ main(int argc, char *argv[])
 			primary_client = optarg;
 			break;
 		case 'v':
-			printf("labwc " LABWC_VERSION "\n");
+			printf("labwc " NECO_VERSION "\n");
 			exit(0);
 		case 'V':
 			verbosity = WLR_INFO;
@@ -179,23 +179,23 @@ main(int argc, char *argv[])
 	rcxml_read(rc.config_file);
 
 	/*
-	 * Set environment variable LABWC_PID to the pid of the compositor
+	 * Set environment variable NECO_PID to the pid of the compositor
 	 * so that SIGHUP and SIGTERM can be sent to specific instances using
 	 * `kill -s <signal> <pid>` rather than `killall -s <signal> labwc`
 	 */
 	char pid[32];
 	snprintf(pid, sizeof(pid), "%d", getpid());
-	if (setenv("LABWC_PID", pid, true) < 0) {
-		wlr_log_errno(WLR_ERROR, "unable to set LABWC_PID");
+	if (setenv("NECO_PID", pid, true) < 0) {
+		wlr_log_errno(WLR_ERROR, "unable to set NECO_PID");
 	} else {
-		wlr_log(WLR_DEBUG, "LABWC_PID=%s", pid);
+		wlr_log(WLR_DEBUG, "NECO_PID=%s", pid);
 	}
 
 	/* useful for helper programs */
-	if (setenv("LABWC_VER", LABWC_VERSION, true) < 0) {
-		wlr_log_errno(WLR_ERROR, "unable to set LABWC_VER");
+	if (setenv("NECO_VER", NECO_VERSION, true) < 0) {
+		wlr_log_errno(WLR_ERROR, "unable to set NECO_VER");
 	} else {
-		wlr_log(WLR_DEBUG, "LABWC_VER=%s", LABWC_VERSION);
+		wlr_log(WLR_DEBUG, "NECO_VER=%s", NECO_VERSION);
 	}
 
 	if (!getenv("XDG_RUNTIME_DIR")) {

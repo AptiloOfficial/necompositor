@@ -110,7 +110,7 @@ void
 output_virtual_update_fallback(struct server *server)
 {
 	struct wl_list *layout_outputs = &server->output_layout->outputs;
-	const char *fallback_output_name = getenv("LABWC_FALLBACK_OUTPUT");
+	const char *fallback_output_name = getenv("NECO_FALLBACK_OUTPUT");
 
 	if (!fallback_output && wl_list_empty(layout_outputs)
 			&& !string_null_or_empty(fallback_output_name)) {

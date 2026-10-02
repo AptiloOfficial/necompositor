@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_PROTOCOLS_COSMIC_WORKSPACES_H
-#define LABWC_PROTOCOLS_COSMIC_WORKSPACES_H
+#ifndef NECO_PROTOCOLS_COSMIC_WORKSPACES_H
+#define NECO_PROTOCOLS_COSMIC_WORKSPACES_H
 
 #include <stdbool.h>
 #include <wayland-server-core.h>
@@ -91,4 +91,4 @@ void lab_cosmic_workspace_set_coordinates(struct lab_cosmic_workspace *workspace
 	struct wl_array *coordinates);
 void lab_cosmic_workspace_destroy(struct lab_cosmic_workspace *workspace);
 
-#endif /* LABWC_PROTOCOLS_COSMIC_WORKSPACES_H */
+#endif /* NECO_PROTOCOLS_COSMIC_WORKSPACES_H */

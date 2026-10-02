@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_DEFAULT_BINDINGS_H
-#define LABWC_DEFAULT_BINDINGS_H
+#ifndef NECO_DEFAULT_BINDINGS_H
+#define NECO_DEFAULT_BINDINGS_H
 
 #include <stddef.h>
 
@@ -485,4 +485,4 @@ static struct mouse_combos {
 	},
 };
 
-#endif /* LABWC_DEFAULT_BINDINGS_H */
+#endif /* NECO_DEFAULT_BINDINGS_H */

@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_CURSOR_H
-#define LABWC_CURSOR_H
+#ifndef NECO_CURSOR_H
+#define NECO_CURSOR_H
 
 #include <wlr/types/wlr_cursor.h>
 #include <wlr/util/edges.h>
@@ -158,4 +158,4 @@ void cursor_emulate_button(struct seat *seat,
 		uint32_t button, enum wl_pointer_button_state state, uint32_t time_msec);
 void cursor_finish(struct seat *seat);
 
-#endif /* LABWC_CURSOR_H */
+#endif /* NECO_CURSOR_H */

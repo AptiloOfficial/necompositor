@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_PROTOCOLS_TRANSACTION_ADDON_H
-#define LABWC_PROTOCOLS_TRANSACTION_ADDON_H
+#ifndef NECO_PROTOCOLS_TRANSACTION_ADDON_H
+#define NECO_PROTOCOLS_TRANSACTION_ADDON_H
 
 #include <wayland-server-core.h>
 
@@ -81,4 +81,4 @@ void lab_resource_addon_destroy(struct lab_wl_resource_addon *addon);
 #define lab_transaction_for_each_safe(trans_op, trans_op_tmp, ctx) \
 	wl_list_for_each_safe(trans_op, trans_op_tmp, &(ctx)->transaction_ops, link)
 
-#endif /* LABWC_PROTOCOLS_TRANSACTIONS_ADDON_H */
+#endif /* NECO_PROTOCOLS_TRANSACTIONS_ADDON_H */

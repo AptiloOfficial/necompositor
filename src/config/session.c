@@ -28,8 +28,8 @@ static const char *const env_vars[] = {
 	"XCURSOR_SIZE",
 	"XCURSOR_THEME",
 	"XDG_SESSION_TYPE",
-	"LABWC_PID",
-	"LABWC_VER",
+	"NECO_PID",
+	"NECO_VER",
 	NULL
 };
 
@@ -190,7 +190,7 @@ should_update_activation(struct server *server)
 {
 	assert(server);
 
-	static const char *act_env = "LABWC_UPDATE_ACTIVATION_ENV";
+	static const char *act_env = "NECO_UPDATE_ACTIVATION_ENV";
 	char *env = getenv(act_env);
 	if (env) {
 		/* Respect any valid preference from the environment */

@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_OSD_H
-#define LABWC_OSD_H
+#ifndef NECO_OSD_H
+#define NECO_OSD_H
 
 #include <stdbool.h>
 #include <wayland-server-core.h>
@@ -62,4 +62,4 @@ void osd_field_arg_from_xml_node(struct window_switcher_field *field,
 bool osd_field_validate(struct window_switcher_field *field);
 void osd_field_free(struct window_switcher_field *field);
 
-#endif // LABWC_OSD_H
+#endif // NECO_OSD_H

@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_BOX_H
-#define LABWC_BOX_H
+#ifndef NECO_BOX_H
+#define NECO_BOX_H
 
 #include <wlr/util/box.h>
 
@@ -24,4 +24,4 @@ struct wlr_box box_fit_within(int width, int height, struct wlr_box *bounding_bo
 
 struct wlr_fbox box_to_fbox(struct wlr_box *box);
 
-#endif /* LABWC_BOX_H */
+#endif /* NECO_BOX_H */

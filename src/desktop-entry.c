@@ -27,7 +27,7 @@ static void
 log_handler(enum sfdo_log_level level, const char *fmt, va_list args, void *tag)
 {
 	/*
-	 * libsfdo info/debug logging is only provided when LABWC_DEBUG_LIBSFDO
+	 * libsfdo info/debug logging is only provided when NECO_DEBUG_LIBSFDO
 	 * is set to avoid disproportionately verbose logging by default for one
 	 * particularly sub-system.
 	 */
@@ -58,7 +58,7 @@ desktop_entry_init(struct server *server)
 {
 	struct sfdo *sfdo = znew(*sfdo);
 
-	debug_libsfdo = getenv("LABWC_DEBUG_LIBSFDO");
+	debug_libsfdo = getenv("NECO_DEBUG_LIBSFDO");
 
 	struct sfdo_basedir_ctx *basedir_ctx = sfdo_basedir_ctx_create();
 	if (!basedir_ctx) {

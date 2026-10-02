@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_RCXML_H
-#define LABWC_RCXML_H
+#ifndef NECO_RCXML_H
+#define NECO_RCXML_H
 
 #include <stdbool.h>
 #include <stdio.h>
@@ -193,4 +193,4 @@ void rcxml_parse_xml(struct buf *b);
 void rcxml_read(const char *filename);
 void rcxml_finish(void);
 
-#endif /* LABWC_RCXML_H */
+#endif /* NECO_RCXML_H */

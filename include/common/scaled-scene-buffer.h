@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_SCALED_SCENE_BUFFER_H
-#define LABWC_SCALED_SCENE_BUFFER_H
+#ifndef NECO_SCALED_SCENE_BUFFER_H
+#define NECO_SCALED_SCENE_BUFFER_H
 
 #include <wayland-server-core.h>
 
@@ -143,4 +143,4 @@ struct scaled_scene_buffer_cache_entry {
 	double scale;
 };
 
-#endif /* LABWC_SCALED_SCENE_BUFFER_H */
+#endif /* NECO_SCALED_SCENE_BUFFER_H */

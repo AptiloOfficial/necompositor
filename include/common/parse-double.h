@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_PARSE_DOUBLE_H
-#define LABWC_PARSE_DOUBLE_H
+#ifndef NECO_PARSE_DOUBLE_H
+#define NECO_PARSE_DOUBLE_H
 #include <assert.h>
 #include <stdbool.h>
 
@@ -29,4 +29,4 @@ set_float(const char *str, float *val)
 	return false;
 }
 
-#endif /* LABWC_PARSE_DOUBLE_H */
+#endif /* NECO_PARSE_DOUBLE_H */

@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_TABLET_TOOL_CONFIG_H
-#define LABWC_TABLET_TOOL_CONFIG_H
+#ifndef NECO_TABLET_TOOL_CONFIG_H
+#define NECO_TABLET_TOOL_CONFIG_H
 
 #include <stdint.h>
 
@@ -11,4 +11,4 @@ enum motion {
 
 enum motion tablet_parse_motion(const char *name);
 
-#endif /* LABWC_TABLET_TOOL_CONFIG_H */
+#endif /* NECO_TABLET_TOOL_CONFIG_H */

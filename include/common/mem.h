@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_MEM_H
-#define LABWC_MEM_H
+#ifndef NECO_MEM_H
+#define NECO_MEM_H
 
 #include <stdlib.h>
 
@@ -60,4 +60,4 @@ char *xstrdup(const char *str);
 	free(ptr); (ptr) = NULL; \
 } while (0)
 
-#endif /* LABWC_MEM_H */
+#endif /* NECO_MEM_H */

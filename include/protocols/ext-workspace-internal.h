@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_PROTOCOLS_EXT_WORKSPACES_INTERNAL_H
-#define LABWC_PROTOCOLS_EXT_WORKSPACES_INTERNAL_H
+#ifndef NECO_PROTOCOLS_EXT_WORKSPACES_INTERNAL_H
+#define NECO_PROTOCOLS_EXT_WORKSPACES_INTERNAL_H
 
 struct wl_resource;
 struct lab_ext_workspace_group;
@@ -22,4 +22,4 @@ void ext_group_output_send_initial_state(struct lab_ext_workspace_group *group,
 
 void ext_manager_schedule_done_event(struct lab_ext_workspace_manager *manager);
 
-#endif /* LABWC_PROTOCOLS_EXT_WORKSPACES_INTERNAL_H */
+#endif /* NECO_PROTOCOLS_EXT_WORKSPACES_INTERNAL_H */

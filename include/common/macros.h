@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_MACROS_H
-#define LABWC_MACROS_H
+#ifndef NECO_MACROS_H
+#define NECO_MACROS_H
 
 #include <limits.h>
 
@@ -61,4 +61,4 @@
 #define BOUNDED_INT(a) ((a) < INT_MAX && (a) > INT_MIN)
 #endif
 
-#endif /* LABWC_MACROS_H */
+#endif /* NECO_MACROS_H */

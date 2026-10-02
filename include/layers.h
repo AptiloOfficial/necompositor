@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_LAYERS_H
-#define LABWC_LAYERS_H
+#ifndef NECO_LAYERS_H
+#define NECO_LAYERS_H
 #include <wayland-server.h>
 #include <wlr/types/wlr_layer_shell_v1.h>
 
@@ -43,4 +43,4 @@ void layers_arrange(struct output *output);
 void layer_try_set_focus(struct seat *seat,
 	struct wlr_layer_surface_v1 *layer_surface);
 
-#endif /* LABWC_LAYERS_H */
+#endif /* NECO_LAYERS_H */

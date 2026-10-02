@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_OVERLAY_H
-#define LABWC_OVERLAY_H
+#ifndef NECO_OVERLAY_H
+#define NECO_OVERLAY_H
 
 #include <wlr/util/box.h>
 #include "common/graphic-helpers.h"

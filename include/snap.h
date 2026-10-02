@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_SNAP_H
-#define LABWC_SNAP_H
+#ifndef NECO_SNAP_H
+#define NECO_SNAP_H
 
 #include "common/border.h"
 #include "view.h"
@@ -19,4 +19,4 @@ void snap_shrink_to_next_edge(struct view *view,
 void snap_invalidate_edge_cache(struct view *view);
 void snap_update_cache_geometry(struct view *view);
 
-#endif /* LABWC_SNAP_H */
+#endif /* NECO_SNAP_H */

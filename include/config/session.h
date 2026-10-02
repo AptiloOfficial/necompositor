@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_SESSION_H
-#define LABWC_SESSION_H
+#ifndef NECO_SESSION_H
+#define NECO_SESSION_H
 
 struct server;
 
@@ -29,4 +29,4 @@ void session_autostart_init(struct server *server);
  */
 void session_shutdown(struct server *server);
 
-#endif /* LABWC_SESSION_H */
+#endif /* NECO_SESSION_H */

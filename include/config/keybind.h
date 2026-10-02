@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_KEYBIND_H
-#define LABWC_KEYBIND_H
+#ifndef NECO_KEYBIND_H
+#define NECO_KEYBIND_H
 
 #include <wlr/types/wlr_keyboard.h>
 #include <xkbcommon/xkbcommon.h>
@@ -42,4 +42,4 @@ uint32_t parse_modifier(const char *symname);
 bool keybind_the_same(struct keybind *a, struct keybind *b);
 
 void keybind_update_keycodes(struct server *server);
-#endif /* LABWC_KEYBIND_H */
+#endif /* NECO_KEYBIND_H */

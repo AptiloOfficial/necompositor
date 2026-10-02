@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_GRAPHIC_HELPERS_H
-#define LABWC_GRAPHIC_HELPERS_H
+#ifndef NECO_GRAPHIC_HELPERS_H
+#define NECO_GRAPHIC_HELPERS_H
 
 #include <cairo.h>
 #include <wayland-server-core.h>
@@ -49,4 +49,4 @@ void draw_cairo_border(cairo_t *cairo, struct wlr_fbox fbox, double line_width);
 
 struct lab_data_buffer;
 
-#endif /* LABWC_GRAPHIC_HELPERS_H */
+#endif /* NECO_GRAPHIC_HELPERS_H */

@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_REGIONS_H
-#define LABWC_REGIONS_H
+#ifndef NECO_REGIONS_H
+#define NECO_REGIONS_H
 
 #include <wlr/util/box.h>
 
@@ -65,4 +65,4 @@ void regions_destroy(struct seat *seat, struct wl_list *regions);
 struct region *regions_from_cursor(struct server *server);
 struct region *regions_from_name(const char *region_name, struct output *output);
 
-#endif /* LABWC_REGIONS_H */
+#endif /* NECO_REGIONS_H */

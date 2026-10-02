@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_KEY_STATE_H
-#define LABWC_KEY_STATE_H
+#ifndef NECO_KEY_STATE_H
+#define NECO_KEY_STATE_H
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -26,4 +26,4 @@ void key_state_bound_key_remove(uint32_t keycode);
 int key_state_nr_bound_keys(void);
 int key_state_nr_pressed_keys(void);
 
-#endif /* LABWC_KEY_STATE_H */
+#endif /* NECO_KEY_STATE_H */

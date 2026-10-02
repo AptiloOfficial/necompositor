@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_EDGES_H
-#define LABWC_EDGES_H
+#ifndef NECO_EDGES_H
+#define NECO_EDGES_H
 
 #include <limits.h>
 #include <stdbool.h>
@@ -121,4 +121,4 @@ void edges_adjust_resize_geom(struct view *view, struct border edges,
 bool edges_traverse_edge(struct edge current, struct edge target, struct edge edge);
 
 void edges_calculate_visibility(struct server *server, struct view *ignored_view);
-#endif /* LABWC_EDGES_H */
+#endif /* NECO_EDGES_H */

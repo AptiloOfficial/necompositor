@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_SESSION_LOCK_H
-#define LABWC_SESSION_LOCK_H
+#ifndef NECO_SESSION_LOCK_H
+#define NECO_SESSION_LOCK_H
 
 #include <wlr/types/wlr_session_lock_v1.h>
 
@@ -35,4 +35,4 @@ void session_lock_init(struct server *server);
 void session_lock_output_create(struct session_lock_manager *manager, struct output *output);
 void session_lock_update_for_layout_change(struct server *server);
 
-#endif /* LABWC_SESSION_LOCK_H */
+#endif /* NECO_SESSION_LOCK_H */

@@ -17,7 +17,7 @@ report(struct lab_set *key_set, const char *msg)
 	static bool has_run;
 
 	if (!has_run) {
-		should_print = getenv("LABWC_DEBUG_KEY_STATE");
+		should_print = getenv("NECO_DEBUG_KEY_STATE");
 		has_run = true;
 	}
 	if (!should_print) {

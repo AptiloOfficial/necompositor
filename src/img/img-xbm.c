@@ -231,7 +231,7 @@ out:
  * Openbox built-in icons are not bigger than 8x8, so have only written this
  * function to cope wit that max size
  */
-#define LABWC_BUILTIN_ICON_MAX_SIZE (8)
+#define NECO_BUILTIN_ICON_MAX_SIZE (8)
 
 /**
  * parse_xbm_builtin - parse builtin xbm button and create pixmap
@@ -242,11 +242,11 @@ parse_xbm_builtin(const char *button, int size)
 {
 	struct pixmap pixmap = { 0 };
 
-	assert(size <= LABWC_BUILTIN_ICON_MAX_SIZE);
+	assert(size <= NECO_BUILTIN_ICON_MAX_SIZE);
 	pixmap.width = size;
 	pixmap.height = size;
 
-	struct token t[LABWC_BUILTIN_ICON_MAX_SIZE + 1];
+	struct token t[NECO_BUILTIN_ICON_MAX_SIZE + 1];
 	for (int i = 0; i < size; i++) {
 		t[i].value = button[i];
 		t[i].type = TOKEN_INT;

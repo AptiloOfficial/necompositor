@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_PLACEMENT_H
-#define LABWC_PLACEMENT_H
+#ifndef NECO_PLACEMENT_H
+#define NECO_PLACEMENT_H
 
 #include <stdbool.h>
 #include <wlr/util/box.h>
@@ -8,4 +8,4 @@
 
 bool placement_find_best(struct view *view, struct wlr_box *geometry);
 
-#endif /* LABWC_PLACEMENT_H */
+#endif /* NECO_PLACEMENT_H */

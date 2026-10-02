@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_XWAYLAND_H
-#define LABWC_XWAYLAND_H
+#ifndef NECO_XWAYLAND_H
+#define NECO_XWAYLAND_H
 #include "config.h"
 
 #if HAVE_XWAYLAND
@@ -102,4 +102,4 @@ void xwayland_update_workarea(struct server *server);
 void xwayland_reset_cursor(struct server *server);
 
 #endif /* HAVE_XWAYLAND */
-#endif /* LABWC_XWAYLAND_H */
+#endif /* NECO_XWAYLAND_H */

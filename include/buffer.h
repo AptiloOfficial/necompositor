@@ -23,8 +23,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#ifndef LABWC_BUFFER_H
-#define LABWC_BUFFER_H
+#ifndef NECO_BUFFER_H
+#define NECO_BUFFER_H
 
 #include <cairo.h>
 #include <wlr/types/wlr_buffer.h>
@@ -70,4 +70,4 @@ struct lab_data_buffer *buffer_create_cairo(uint32_t logical_width,
 struct lab_data_buffer *buffer_create_from_data(void *pixel_data, uint32_t width,
 	uint32_t height, uint32_t stride);
 
-#endif /* LABWC_BUFFER_H */
+#endif /* NECO_BUFFER_H */

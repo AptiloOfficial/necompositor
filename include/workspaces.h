@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_WORKSPACES_H
-#define LABWC_WORKSPACES_H
+#ifndef NECO_WORKSPACES_H
+#define NECO_WORKSPACES_H
 
 #include <stdbool.h>
 #include <wayland-util.h>
@@ -45,4 +45,4 @@ struct workspace *workspaces_find(struct workspace *anchor, const char *name,
 	bool wrap);
 void workspaces_reconfigure(struct server *server);
 
-#endif /* LABWC_WORKSPACES_H */
+#endif /* NECO_WORKSPACES_H */

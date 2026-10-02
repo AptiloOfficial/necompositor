@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_SCALED_ICON_BUFFER_H
-#define LABWC_SCALED_ICON_BUFFER_H
+#ifndef NECO_SCALED_ICON_BUFFER_H
+#define NECO_SCALED_ICON_BUFFER_H
 
 #include <stdbool.h>
 
@@ -37,4 +37,4 @@ void scaled_icon_buffer_set_icon_name(struct scaled_icon_buffer *self,
 /* Obtain scaled_icon_buffer from wlr_scene_node */
 struct scaled_icon_buffer *scaled_icon_buffer_from_node(struct wlr_scene_node *node);
 
-#endif /* LABWC_SCALED_ICON_BUFFER_H */
+#endif /* NECO_SCALED_ICON_BUFFER_H */

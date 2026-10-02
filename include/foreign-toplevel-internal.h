@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_FOREIGN_TOPLEVEL_INTERNAL_H
-#define LABWC_FOREIGN_TOPLEVEL_INTERNAL_H
+#ifndef NECO_FOREIGN_TOPLEVEL_INTERNAL_H
+#define NECO_FOREIGN_TOPLEVEL_INTERNAL_H
 
 #include <stdbool.h>
 #include <wayland-server-core.h>
@@ -80,4 +80,4 @@ void foreign_request_fullscreen(struct foreign_toplevel *toplevel, bool fullscre
 void foreign_request_activate(struct foreign_toplevel *toplevel);
 void foreign_request_close(struct foreign_toplevel *toplevel);
 
-#endif /* LABWC_FOREIGN_TOPLEVEL_INTERNAL_H */
+#endif /* NECO_FOREIGN_TOPLEVEL_INTERNAL_H */

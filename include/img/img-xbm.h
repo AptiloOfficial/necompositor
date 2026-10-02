@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#ifndef LABWC_IMG_XBM_H
-#define LABWC_IMG_XBM_H
+#ifndef NECO_IMG_XBM_H
+#define NECO_IMG_XBM_H
 
 struct lab_data_buffer;
 
@@ -16,4 +16,4 @@ struct lab_data_buffer *img_xbm_load_from_bitmap(const char *bitmap, float *rgba
 /* img_xbm_load - Convert xbm file to buffer with cairo surface */
 struct lab_data_buffer *img_xbm_load(const char *filename, float *rgba);
 
-#endif /* LABWC_IMG_XBM_H */
+#endif /* NECO_IMG_XBM_H */
