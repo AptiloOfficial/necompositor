@@ -30,7 +30,7 @@ static const struct option long_options[] = {
 	{0, 0, 0, 0}
 };
 
-static const char labwc_usage[] =
+static const char neco_usage[] =
 "Usage: labwc [options...]\n"
 "  -c, --config <file>      Specify config file (with path)\n"
 "  -C, --config-dir <dir>   Specify config directory\n"
@@ -47,7 +47,7 @@ static const char labwc_usage[] =
 static void
 usage(void)
 {
-	printf("%s", labwc_usage);
+	printf("%s", neco_usage);
 	exit(0);
 }
 
@@ -67,12 +67,12 @@ die_on_detecting_suid(void)
 static void
 send_signal_to_labwc_pid(int signal)
 {
-	char *labwc_pid = getenv("LABWC_PID");
-	if (!labwc_pid) {
+	char *neco_pid = getenv("LABWC_PID");
+	if (!neco_pid) {
 		wlr_log(WLR_ERROR, "LABWC_PID not set");
 		exit(EXIT_FAILURE);
 	}
-	int pid = atoi(labwc_pid);
+	int pid = atoi(neco_pid);
 	if (!pid) {
 		wlr_log(WLR_ERROR, "should not send signal to pid 0");
 		exit(EXIT_FAILURE);

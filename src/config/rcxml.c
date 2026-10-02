@@ -995,7 +995,7 @@ entry(xmlNode *node, char *nodename, char *content, struct parser_state *state)
 		return;
 	}
 	string_truncate_at_pattern(nodename, ".openbox_config");
-	string_truncate_at_pattern(nodename, ".labwc_config");
+	string_truncate_at_pattern(nodename, ".neco_config");
 
 	if (getenv("LABWC_DEBUG_CONFIG_NODENAMES")) {
 		printf("%s: %s\n", nodename, content);
