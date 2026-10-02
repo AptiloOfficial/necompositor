@@ -1,3 +1,34 @@
+# NeCompositor News
+
+## 0.1.0 — 2026-10-02
+
+Initial fork from [LabWC 0.8.4](https://github.com/labwc/labwc).
+
+### Added
+- Renamed binary from `labwc` to `necompositor`
+- Renamed project to NeCompositor
+- Config paths moved from `~/.config/labwc/` to `~/.config/necompositor/`
+
+### Changed
+- XWayland disabled by default in standard builds
+- Internal version macro: `LABWC_VERSION` → `NECO_VERSION`
+- Man pages renamed: `labwc-*.scd` → `necompositor-*.scd`
+- Icons renamed: `labwc.svg` → `necompositor.svg`
+
+### Preserved
+- Full LabWC configuration format compatibility (`rc.xml`, `menu.xml`, `autostart`, `environment`, `shutdown`, `themerc`)
+- Openbox theme format support
+- All upstream commits and contributor credits (see `git log`)
+
+---
+
+*Everything below this line is LabWC upstream history, preserved for attribution.*
+*See `git log` for the full NeCompositor commit history.*
+
+---
+
+(next - original NEWS by LabWC)
+
 # Introduction (.md by LabWC)
 
 This file contains significant user-visible changes for each version.
