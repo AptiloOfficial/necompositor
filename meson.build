@@ -113,14 +113,8 @@ if get_option('static_analyzer').enabled()
   add_project_arguments(['-fanalyzer'], language: 'c')
 endif
 
-msgfmt = find_program('msgfmt', required: get_option('nls'))
-if msgfmt.found()
-  source_root = meson.current_source_dir()
-  conf_data.set('HAVE_NLS', 1)
-  subdir('po')
-else
-  conf_data.set('HAVE_NLS', 0)
-endif
+# i18n is handled by the desktop environment (e.g. NeDE/Another DE), not the compositor.
+conf_data.set('HAVE_NLS', 0)
 
 neco_inc = include_directories('include')
 
