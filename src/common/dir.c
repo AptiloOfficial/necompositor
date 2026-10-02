@@ -27,11 +27,11 @@ static struct dir config_dirs[] = {
 	{
 		.prefix = "XDG_CONFIG_HOME",
 		.default_prefix = "$HOME/.config",
-		.path = "labwc"
+		.path = "necompositor"
 	}, {
 		.prefix = "XDG_CONFIG_DIRS",
 		.default_prefix = "/etc/xdg",
-		.path = "labwc",
+		.path = "necompositor",
 	}, {
 		.path = NULL,
 	}

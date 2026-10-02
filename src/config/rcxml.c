@@ -1764,7 +1764,7 @@ post_processing(void)
 	}
 
 	if (!rc.fallback_app_icon_name) {
-		rc.fallback_app_icon_name = xstrdup("labwc");
+		rc.fallback_app_icon_name = xstrdup("necompositor");
 	}
 
 	if (!rc.icon_theme_name && rc.theme_name) {
