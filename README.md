@@ -85,7 +85,7 @@ sudo ninja -C build install
 * `librsvg ≥ 2.46` *(optional)*
 * `libsfdo` *(optional)*
 
-*Note: XWayland isn't required and stays off by default.*
+*Note: XWayland is enabled by default. To build without it, pass `-Dxwayland=disabled`.*
 
 ### Build Dependencies
 
@@ -93,12 +93,12 @@ sudo ninja -C build install
 * `gcc` or `clang`
 * `wayland-protocols`
 
-### Want XWayland support?
+### Want to disable XWayland?
 
 Just enable the flag during setup:
 
 ```bash
-meson setup build -Dxwayland=enabled
+meson setup build -Dxwayland=disabled
 
 ```
 
