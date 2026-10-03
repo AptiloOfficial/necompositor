@@ -101,7 +101,7 @@ sudo ninja -C build install
 
 ### Want to disable XWayland?
 
-Just enable the flag during setup:
+Just pass the flag during setup:
 
 ```bash
 meson setup build -Dxwayland=disabled
