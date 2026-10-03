@@ -29,7 +29,7 @@ It’s an active, early-stage fork — but it's daily-driver material and rock s
 * Crisp HiDPI scaling out of the box
 * Rich protocol support via wlroots: `output-management`, `layer-shell`, and `foreign-toplevel`
 * Drop-in compatibility with Openbox themes
-* XWayland is disabled by default in standard builds for a smaller memory footprint
+* XWayland enabled by default for X11 apps (Steam, Wine, Proton)
 
 ## Where It Fits In
 
