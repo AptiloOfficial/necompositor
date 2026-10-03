@@ -11,6 +11,12 @@ It serves as the flagship compositor for the [NeDE](https://github.com/AptiloOff
 
 NeCompositor stands on the shoulders of the incredible [LabWC](https://github.com/labwc/labwc) project. Huge thanks to Johan Malm, Consolatis, tokyo4j, and the 100+ contributors who built the foundation we rely on.
 
+## Screenshots
+
+![Blender running on NeCompositor](docs/screenshots/blender.png)
+
+*Blender 5.2.2 LTS running natively on NeCompositor.*
+
 ## Current State
 
 It’s an active, early-stage fork — but it's daily-driver material and rock solid for everyday use.
